@@ -11,16 +11,39 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.6.0",
+    "prettier": "2.8.3"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix-dry-run",
+    "format": "prettier src",
+    "format:fix": "prettier src --write",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "prettier": {
+    "singleQuote": false
+  },
   "eslintConfig": {
+    "ignorePatterns": [
+      "coverage/**",
+      "node_modules/**",
+      "public/*.html",
+      "!src/**"
+    ],
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "prettier"
+    ],
+    "rules": {}
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
     ]
   },
   "browserslist": {
