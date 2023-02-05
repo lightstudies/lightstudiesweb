@@ -4,10 +4,11 @@
 
 ### To-Do
 
-- [ ] build out UI
-- [ ] read in data either locally or from a service
-- [ ] create accounts
-- [ ] formation editor
+- [ ] build out base UI
+- [ ] build out base page layouts
+  - [ ] Photo only (embeds only)
+  - [ ] Video only
+  - [ ] Photo & Video
 - [ ] ...
 
 ### File Structure
@@ -18,26 +19,28 @@
    │   ├── extensions.json
    │   └── settings.json
    ├── public
-   │   ├── favicon.ico
+   │   ├── favicon.ico                            // Used for things like webpage bookmark icon, etc.
    │   ├── index.html
-   │   ├── logo192.png
+   │   ├── logo192.png                            // Logos used in manifest
    │   ├── logo512.png
    │   ├── manifest.json
    │   └── robots.txt
    ├── src
-   │   ├── components                              // React Components go here
-   │   ├── App.test.tsx
-   │   ├── App.tsx
-   │   ├── index.tsx
-   │   ├── react-app-env.d.ts
-   │   ├── reportWebVitals.ts
-   │   └── setupTests.ts
+   │   ├── components/                            // React Components go here
+   │   ├── App.css                                // Base app styles
+   │   ├── App.js
+   │   ├── App.test.js
+   │   ├── index.css                              // Base DOM styles
+   │   ├── index.js
+   │   ├── logo.svg                               // Logo as vector
+   │   ├── reportWebVitals.js
+   │   └── setupTests.js                          // Runs jest setup for testing
    ├── .gitignore
    ├── CHANGELOG.md
    ├── LICENSE.md
    ├── package.json
    ├── README.md
-   └── yarn.lock
+   └── yarn.lock                                   // Locks node packages to version
 ```
 
 ### Reporting Issues:
