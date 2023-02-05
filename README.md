@@ -4,6 +4,8 @@
 
 ### To-Do
 
+- [x] INIT Project
+- [x] Configure github pages deploy
 - [ ] build out base UI
 - [ ] build out base page layouts
   - [ ] Photo only (embeds only)
