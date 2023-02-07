@@ -1,64 +1,36 @@
 {
   "name": "lightstudiesweb",
   "homepage": "https://lightstudies.github.io/lightstudiesweb",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "gh-pages": "^5.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
-  "devDependencies": {
-    "eslint-config-prettier": "^8.6.0",
-    "prettier": "2.8.3"
-  },
+  "type": "module",
   "scripts": {
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "lint": "eslint src",
-    "lint:fix": "eslint src --fix-dry-run",
-    "format": "prettier src",
-    "format:fix": "prettier src --write",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "vite",
+    "lint": "eslint . --ext .js,.jsx",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "prettier": {
-    "singleQuote": false
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
-  "eslintConfig": {
-    "ignorePatterns": [
-      "coverage/**",
-      "node_modules/**",
-      "public/*.html",
-      "!src/**"
-    ],
-    "extends": [
-      "react-app",
-      "react-app/jest",
-      "prettier"
-    ],
-    "rules": {}
-  },
-  "jest": {
-    "coveragePathIgnorePatterns": []
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "gh-pages": "^5.0.0",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.3",
+    "prettier-plugin-tailwindcss": "^0.2.2",
+    "tailwindcss": "^3.2.4",
+    "vite": "^4.1.0"
   }
 }
