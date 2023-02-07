@@ -19,32 +19,35 @@
    .
    ├── .vscode                          // Optional – used to persist VS Code Settings
    │   ├── extensions.json
+   │   ├── launch.json
    │   └── settings.json
    ├── public
-   │   ├── favicon.ico                  // Used for things like webpage bookmark icon, etc.
-   │   ├── index.html
-   │   ├── logo192.png                  // Logos used in manifest
-   │   ├── logo512.png
-   │   ├── manifest.json
-   │   └── robots.txt
+   │   └── vite.svg
    ├── src
+   │   ├── assets/                      // Site assets
    │   ├── components/                  // React Components go here
+   │   ├── hooks/                       // React Hooks go here
    │   ├── layouts/                     // React Layouts
    │   ├── pages/                       // React Pages
    │   ├── App.css                      // Base app styles
-   │   ├── App.js
-   │   ├── App.test.js
+   │   ├── App.jsx                      // Base react app
+   │   ├── constants.js                 // Site constants go here
    │   ├── index.css                    // Base DOM styles
-   │   ├── index.js
-   │   ├── logo.svg                     // Logo as vector
-   │   ├── reportWebVitals.js
-   │   └── setupTests.js                // Runs jest setup for testing
-   ├── .gitignore
-   ├── CHANGELOG.md
-   ├── LICENSE.md
-   ├── package.json
-   ├── README.md
-   └── yarn.lock                         // Locks node packages to version
+   │   └── main.jsx                     // React bootstrap
+   ├── .eslintignore                    // ESlint ignore file
+   ├── .eslintrc.cjs                    // ESlint config file
+   ├── .gitignore                       // Git ignore file
+   ├── .prettierignore                  // Prettier ignore file
+   ├── .prettierignore                  // Prettier ignore file
+   ├── CHANGELOG.md                     // Changes published here
+   ├── index.html                       // site bootstrap
+   ├── LICENSE                          // repo license
+   ├── package.json                     // node project config
+   ├── postcss.config.cjs               // PostCSS config for Tailwind
+   ├── README.md                        // Project info in markdown
+   ├── tailwind.config.cjs              // Tailwind config
+   ├── vite.config.js                   // Vite config
+   └── yarn.lock                        // Locks node packages to version
 ```
 
 ### Reporting Issues:
@@ -55,4 +58,4 @@
 
 - Licensed under MIT (https://github.com/lightstudies/lightstudiesweb/blob/master/LICENSE)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Vite](https://vitejs.dev/).
