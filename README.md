@@ -4,7 +4,7 @@
 
 ### To-Do
 
-- [x] INIT Project
+- [x] Init Project
 - [x] Configure github pages deploy
 - [ ] build out base UI
 - [ ] build out base page layouts
@@ -17,32 +17,34 @@
 
 ```
    .
-   ├── .vscode                                    // Optional – used to persist VS Code Settings
+   ├── .vscode                          // Optional – used to persist VS Code Settings
    │   ├── extensions.json
    │   └── settings.json
    ├── public
-   │   ├── favicon.ico                            // Used for things like webpage bookmark icon, etc.
+   │   ├── favicon.ico                  // Used for things like webpage bookmark icon, etc.
    │   ├── index.html
-   │   ├── logo192.png                            // Logos used in manifest
+   │   ├── logo192.png                  // Logos used in manifest
    │   ├── logo512.png
    │   ├── manifest.json
    │   └── robots.txt
    ├── src
-   │   ├── components/                            // React Components go here
-   │   ├── App.css                                // Base app styles
+   │   ├── components/                  // React Components go here
+   │   ├── layouts/                     // React Layouts
+   │   ├── pages/                       // React Pages
+   │   ├── App.css                      // Base app styles
    │   ├── App.js
    │   ├── App.test.js
-   │   ├── index.css                              // Base DOM styles
+   │   ├── index.css                    // Base DOM styles
    │   ├── index.js
-   │   ├── logo.svg                               // Logo as vector
+   │   ├── logo.svg                     // Logo as vector
    │   ├── reportWebVitals.js
-   │   └── setupTests.js                          // Runs jest setup for testing
+   │   └── setupTests.js                // Runs jest setup for testing
    ├── .gitignore
    ├── CHANGELOG.md
    ├── LICENSE.md
    ├── package.json
    ├── README.md
-   └── yarn.lock                                   // Locks node packages to version
+   └── yarn.lock                         // Locks node packages to version
 ```
 
 ### Reporting Issues:
@@ -51,6 +53,6 @@
 
 ### License
 
-- Licensed under MIT (https://github.com/lightstudies/lightstudiesweb/blob/master/LICENSE.md)
+- Licensed under MIT (https://github.com/lightstudies/lightstudiesweb/blob/master/LICENSE)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
