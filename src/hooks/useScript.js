@@ -51,6 +51,8 @@ function useScript(src) {
         if (script) {
           script.removeEventListener('load', setStateFromEvent)
           script.removeEventListener('error', setStateFromEvent)
+          // TO-DO: Do I need to offload this?
+          // document.body.removeChild(script)
         }
       }
     },

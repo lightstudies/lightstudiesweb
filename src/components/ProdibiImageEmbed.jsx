@@ -16,7 +16,7 @@ const ProdibiImageEmbed = ({ id, account, height, width, className }) => {
   }
 
   const prodibiScript = useScript(
-    'https://max1.prodibicdn.com/libraries/pages/prodibi.embed.2.0.min.js'
+    '../prodibi.embed.2.0.min.js'
   )
 
   useEffect(() => {
@@ -31,12 +31,8 @@ const ProdibiImageEmbed = ({ id, account, height, width, className }) => {
 
       // Not sure why we need this but found here:
       // https://github.com/webpack/webpack-dev-server/issues/792#issuecomment-410139604
-      window.self = window
+      // window.self = window
     }
-
-    // return () => {
-    //   document.body.removeChild(script)
-    // }
   }, [account, prodibiScript])
 
   return (
