@@ -7,6 +7,7 @@ module.exports = {
     // By extending from a plugin config, we can get recommended rules without having to add them manually.
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
     "plugin:react/jsx-runtime",
     "plugin:import/recommended",
     "plugin:jsx-a11y/recommended",
