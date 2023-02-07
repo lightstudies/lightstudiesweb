@@ -1,36 +1,8 @@
-.App {
-  height: 100%;
-  width: 100%;
-  /* padding: 0; */
-  /* margin: 0; */
-  background-color: #282c34;
-}
-
-.App-main-layout {
-  height: 100vh;
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-.App-header {
-  background-color: #282c34;
-  flex: 0 1 auto;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-body {
-  background-color: #000000;
-  flex: 1 1 auto;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-footer {
-  background-color: #282c34;
-  flex: 0 1 auto;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  .App {
+    @apply flex h-full w-full flex-col;
+  }
 }
