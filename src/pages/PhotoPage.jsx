@@ -1,12 +1,8 @@
 import { ProdibiImageEmbed } from '../components'
 import { PRODIBI_ACCOUNT } from '../constants'
 
-export const PhotoPage = () => {
-  return (
-    <div>
-      <h1>PhotoPage</h1>
-
-      <ProdibiImageEmbed account={PRODIBI_ACCOUNT} id="0kj72yq82204qv6" height={6150} width={9609} />
-    </div>
-  )
-}
+export const PhotoPage = () => (
+  <div className="flex flex-col 2xl:flex-row">
+    <ProdibiImageEmbed account={PRODIBI_ACCOUNT} id="kvzw7oy9rq9x24j" height={26289} width={28835} />
+  </div>
+);
