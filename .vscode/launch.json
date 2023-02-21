@@ -1,0 +1,33 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    
+    {
+      "name": "Launch",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}",
+      "runtimeExecutable": "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe",
+      "osx": {
+        "runtimeExecutable": "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
+      },
+      "smartStep": true
+    },
+    // Must launch browser with --remote-debugging-port=9222
+    // **Browser must not have already been launched before
+    // **Must be at url below
+    {
+      "name": "Attach",
+      "port": 9222,
+      "request": "attach",
+      "type": "chrome",
+      "webRoot": "${workspaceFolder}",
+      "url": "http://localhost:5173",
+      "smartStep": true
+    }
+  ]
+}
