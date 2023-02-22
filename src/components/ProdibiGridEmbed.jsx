@@ -11,7 +11,7 @@ const ProdibiGridEmbed = ({ container, account, openTriggers, seo, className }) 
       seo,
     },
   };
-  return <canvas className={className} data-prodibi={JSON.stringify(prodibiData)} />;
+  return <div className={className} data-prodibi={JSON.stringify(prodibiData)}></div>;
 };
 
 ProdibiGridEmbed.propTypes = {

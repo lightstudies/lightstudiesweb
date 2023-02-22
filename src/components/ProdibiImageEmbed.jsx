@@ -10,12 +10,10 @@ const ProdibiImageEmbed = ({ id, account, title, height, width, className }) => 
     branding: false,
     widthMode: 'aspectRatio',
     heightMode: '90vh',
-    // smartX: '0.48',
-    // smartY: '0.67',
   }
 
   return (
-    <canvas className={className} data-prodibi={JSON.stringify(prodibiData)} />
+    <canvas className={className} data-prodibi={JSON.stringify(prodibiData)} ></canvas>
   )
 }
 

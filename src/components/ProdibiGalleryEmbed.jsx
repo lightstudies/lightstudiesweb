@@ -16,7 +16,7 @@ const ProdibiGalleryEmbed = ({ container, account, openTriggers, seo, className 
     },
   }
   return (
-    <canvas className={className} data-prodibi={JSON.stringify(prodibiData)} />
+    <canvas className={className} data-prodibi={JSON.stringify(prodibiData)}></canvas>
   )
 }
 
