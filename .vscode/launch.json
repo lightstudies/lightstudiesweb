@@ -13,7 +13,7 @@
       "webRoot": "${workspaceFolder}",
       "runtimeExecutable": "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe",
       "osx": {
-        "runtimeExecutable": "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
+        "runtimeExecutable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
       },
       "smartStep": true
     },
