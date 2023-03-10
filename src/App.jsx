@@ -1,12 +1,13 @@
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-import { MainLayout } from './layouts';
-import { PRODIBI_ACCOUNT } from './constants';
-import { useScript } from './hooks';
+import Routes from './Routes';
 
 function App() {
   return (
-    <div className="App">
-      <MainLayout />
+    <div className="App  text-white dark:bg-primary">
+      <BrowserRouter basename="/lightstudiesweb/">
+        <Routes />
+      </BrowserRouter>
     </div>
   );
 }

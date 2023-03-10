@@ -9,7 +9,7 @@ const ProdibiImageEmbed = ({ id, account, title, height, width, className }) => 
     height,
     branding: false,
     widthMode: 'aspectRatio',
-    heightMode: '90vh',
+    heightMode: '100vh',
   }
 
   return (
@@ -19,7 +19,7 @@ const ProdibiImageEmbed = ({ id, account, title, height, width, className }) => 
 
 ProdibiImageEmbed.propTypes = {
   id: PropTypes.string.isRequired,
-  account: PropTypes.string.isRequired,
+  account: PropTypes.string,
   title: PropTypes.string,
   height: PropTypes.number.isRequired,
   width: PropTypes.number.isRequired,

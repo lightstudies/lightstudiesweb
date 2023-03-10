@@ -3,6 +3,8 @@
     "*.css": "tailwindcss"
   },
   "cSpell.words": [
-    "PRODIBI"
+    "headlessui",
+    "PRODIBI",
+    "tailwindcss"
   ]
 }

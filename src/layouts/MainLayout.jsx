@@ -1,13 +1,22 @@
-import { PhotoPage } from '../pages'
+import { useEffect } from 'react';
+import { Nav } from '../components';
+import { PRODIBI_ACCOUNT } from '../constants';
+import { useScript } from '../hooks';
+import { Outlet } from 'react-router-dom';
 
 export const MainLayout = () => {
+  // if(vimeoStatus != 'ready' || prodibiStatus != 'ready') {
+  //   return <div>Loading...</div>;
+  // }
+
   return (
-    <div className="App-main-layout">
-      <div className="App-header">Header</div>
-      <div className="App-body">
-        <PhotoPage />
+    <div className="flex flex-col h-full">
+      <Nav />
+      {/* <div className="App-header">Header</div> */}
+      <div className="flex-1">
+        <Outlet />
       </div>
-      <div className="App-footer">Footer</div>
+      <div className="mt-auto">Footer</div>
     </div>
-  )
-}
+  );
+};
