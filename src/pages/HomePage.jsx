@@ -6,9 +6,9 @@ const HomePage = () => {
   useScript('./prodibi.embed.2.0.min.js');
   
   return (
-    <div>
+    <div className="flex flex-col h-full">
       <ReactPlayer url="https://player.vimeo.com/video/330532405" controls />
-      <ProdibiGridEmbed container="g6q6wg7446w87r6" />
+      <ProdibiGridEmbed className="flex-1" container="g6q6wg7446w87r6" />
     </div>
   );
 };

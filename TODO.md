@@ -1,0 +1,42 @@
+# TODO
+
+- [x] Nav
+  - [x] Hamburger Menu/Links
+    - [x] sticky
+  - [x] Routing (React-Router v6)
+    - [x] figure out how to work with layouts
+- [ ] Layout
+  - [ ] Full Width & centering
+- [ ] Pic-time embed
+- [ ] Video embed
+  - [ ] custom play
+  - [ ] full
+- [ ] Pages
+  - [ ] Home
+    - Links
+    - Highlight gallery
+    - 1  Video Reel
+  - [ ] Photo
+    - Links
+    - Large Default Gallery
+  - [ ] Video
+    - Links
+    - YouTube embeds
+  - [ ] Prints
+    - pic-time embed
+  - [ ] About
+    - photo with some text
+  - [ ] inside out "feature"
+    - prodibi embed with some text
+    - 1 column
+  - [ ] Footer
+    - [ ] copyright ino
+    - [ ] site map
+- [ ] Fonts/Colors
+  - Font: Agency
+  - Dark background, light text
+- [ ] Domain Redirect
+  - Include CNAME
+- [ ] Lazy Load large galleries
+- [ ] Video background
+- [ ] red highlighter streak hover effect
