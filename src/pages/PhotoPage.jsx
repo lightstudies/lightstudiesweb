@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { ProdibiGridEmbed, ProdibiImageEmbed } from '../components';
 import { PRODIBI_ACCOUNT } from '../constants';
-import { useFetch, useProdibi } from '../hooks';
+import { useFetch, useScript } from '../hooks';
 
 const PhotoPage = () => {
   const containerId = 'wo7kv5w1z2r92r0';
@@ -9,7 +9,7 @@ const PhotoPage = () => {
   //   `https://core.prodibi.com/api/biglight/containers/${containerId}?$expand&$select=id,name,title,description,cover,author,hashTags,access,isDownloadEnabled,showStatistics,gridType,type,order,favorite,location,createDate,margin,items/id,items/height,items/width,items/title,items/description,items/author,items/name,items/rating,items/hashTags,items/sas,items/s,items/order,items/smartX,items/smartY,items/favorite,items/location,items/exifs,items/createDate&$orderby=order asc,items/order asc&$info&st=null&t=1676936500235`,
   // );
 
-  useProdibi();
+  useScript('./prodibi.embed.2.0.min.js');
 
   // useEffect(() => {
   //   const src = './prodibi.embed.2.0.min.js';
@@ -34,7 +34,7 @@ const PhotoPage = () => {
 
   return (
     <div className="flex flex-col flex-wrap gap-4 bg-zinc-800">
-      <ProdibiGridEmbed container={containerId} account={PRODIBI_ACCOUNT}/>
+      <ProdibiGridEmbed container={containerId} account={PRODIBI_ACCOUNT} />
       {/* {data?.value.map((image) => (
         <ProdibiImageEmbed
           key={image.id}
@@ -48,5 +48,4 @@ const PhotoPage = () => {
   );
 };
 
-
-export default PhotoPage
+export default PhotoPage;

@@ -1,9 +1,6 @@
 import PropTypes from 'prop-types';
-import { useProdibi } from '../hooks';
 
 const ProdibiGridEmbed = ({ container, account, openTriggers, seo, className }) => {
-
-  useProdibi();
   const prodibiData = {
     type: 'grid',
     settings: {
