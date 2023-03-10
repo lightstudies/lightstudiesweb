@@ -1,1 +1,11 @@
-export * from "./PhotoPage";
+export { default as AboutPage } from "./AboutPage";
+export { default as BuyPage } from "./BuyPage";
+export { default as HomePage } from "./HomePage";
+export { default as InsideOutPage } from "./InsideOutPage";
+export { default as PhotoPage } from "./PhotoPage";
+export { default as PhotoPagePortrait } from "./PhotoPagePortrait";
+export { default as PhotoPageRealEstate } from "./PhotoPageRealEstate";
+export { default as PhotoPageUnderwater } from "./PhotoPageUnderwater";
+export { default as PhotoPageWedding } from "./PhotoPageWedding";
+export { default as VideoPage } from "./VideoPage";
+export { default as VideoPagePortrait } from "./VideoPagePortrait";
