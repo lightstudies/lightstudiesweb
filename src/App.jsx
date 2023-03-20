@@ -10,9 +10,12 @@ function App() {
   window.prodibiAsync.push({ type: 'settings', settings: { account: PRODIBI_ACCOUNT } });
   
   return (
+    <div className="h-full dark:text-white dark:bg-neutral-900">
+
     <BrowserRouter basename="/lightstudiesweb/">
       <Routes />
     </BrowserRouter>
+    </div>
   );
 }
 
