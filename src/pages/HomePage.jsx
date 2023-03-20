@@ -3,7 +3,6 @@ import { useScript } from '../hooks';
 
 const HomePage = () => {
   useScript('./prodibi.embed.2.0.min.js');
-
   return (
     <div>
       <div className="mb-[2px]">
