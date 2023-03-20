@@ -10,6 +10,18 @@ function Nav() {
     video: false,
   });
 
+  const topLevelLinkClasses =
+    'rounded-md px-3 py-2 text-neutral-700 hover:bg-neutral-300 hover:text-current dark:text-white dark:hover:bg-neutral-700';
+
+  const smallScreenLinkClasses =
+    'block rounded-md px-3 py-2 text-neutral-700 hover:bg-neutral-300 hover:text-black dark:text-white dark:hover:bg-neutral-700';
+
+  const smallScreenDivLinkClasses =
+    'inline-flex w-full rounded-md text-neutral-700 hover:bg-neutral-300 dark:text-neutral-300 dark:hover:bg-neutral-700 dark:hover:text-white';
+
+  const smallScreenBtnClasses =
+    'w-full rounded-r-md py-2 pr-1 hover:bg-neutral-400 hover:text-black dark:hover:bg-neutral-600 dark:hover:text-white';
+
   const handlePhotoClick = () => {
     setSubMenuState({ ...subMenuState, photo: !subMenuState.photo });
   };
@@ -34,7 +46,7 @@ function Nav() {
   ];
 
   return (
-    <nav className="bg-neutral-800">
+    <nav className="bg-neutral-200 dark:bg-neutral-800">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center">
           <div className="flex w-full items-center">
@@ -53,30 +65,24 @@ function Nav() {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <Link to="/" className="rounded-md px-3 py-2 font-medium text-white hover:bg-neutral-700">
+                <Link to="/" className={topLevelLinkClasses}>
                   home
                 </Link>
 
-                <Link
-                  to="/about"
-                  className="rounded-md px-3 py-2 font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
-                >
+                <Link to="/about" className={topLevelLinkClasses}>
                   about
                 </Link>
                 <Dropdown topLink={{ text: 'photo', link: '/photo' }} links={photoLinks} />
                 <Dropdown topLink={{ text: 'video', link: '/video' }} links={videoLinks} />
 
-                <Link
-                  to="/inside-out"
-                  className="rounded-md px-3 py-2 font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
-                >
+                <Link to="/inside-out" className={topLevelLinkClasses}>
                   inside out
                 </Link>
 
                 <Link
                   to="https://spires.pic-time.com/-prints3168/gallery"
                   target="_blank"
-                  className="rounded-md px-3 py-2 font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                  className={topLevelLinkClasses}
                 >
                   buy prints
                 </Link>
@@ -87,7 +93,7 @@ function Nav() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="inline-flex items-center justify-center rounded-md bg-neutral-900 p-2 text-neutral-400 hover:bg-neutral-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              className="inline-flex items-center justify-center rounded-md bg-neutral-200 p-2 text-neutral-700 hover:bg-neutral-300 hover:text-current focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-700 dark:focus:ring-offset-gray-800"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -138,32 +144,21 @@ function Nav() {
 
               <Link
                 to="/"
-                className="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                className="block rounded-md px-3 py-2 text-neutral-700 hover:bg-neutral-300 hover:text-current dark:text-white dark:hover:bg-neutral-700"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 home
               </Link>
 
-              <Link
-                to="/about"
-                className="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
-                onClick={() => setIsOpen(!isOpen)}
-              >
+              <Link to="/about" className={smallScreenLinkClasses} onClick={() => setIsOpen(!isOpen)}>
                 about
               </Link>
 
-              <div className="inline-flex w-full rounded-md font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white">
-                <Link
-                  to="/photo"
-                  className="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
-                  onClick={() => setIsOpen(!isOpen)}
-                >
+              <div className={smallScreenDivLinkClasses}>
+                <Link to="/photo" className={smallScreenLinkClasses} onClick={() => setIsOpen(!isOpen)}>
                   photo
                 </Link>
-                <button
-                  className="w-full rounded-r-md py-2 pr-1 hover:bg-neutral-600 hover:text-white"
-                  onClick={() => handlePhotoClick()}
-                >
+                <button className={smallScreenBtnClasses} onClick={() => handlePhotoClick()}>
                   <svg
                     className="ml-1 h-4 w-4 self-center"
                     fill="currentColor"
@@ -183,7 +178,7 @@ function Nav() {
                 <div>
                   <Link
                     to="/photo/real-estate"
-                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    className={`${smallScreenLinkClasses} pl-6`}
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     real estate
@@ -191,7 +186,7 @@ function Nav() {
 
                   <Link
                     to="/photo/underwater"
-                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    className={`${smallScreenLinkClasses} pl-6`}
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     underwater
@@ -199,7 +194,7 @@ function Nav() {
 
                   <Link
                     to="/photo/wedding"
-                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    className={`${smallScreenLinkClasses} pl-6`}
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     wedding
@@ -207,7 +202,7 @@ function Nav() {
 
                   <Link
                     to="/photo/portrait"
-                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    className={`${smallScreenLinkClasses} pl-6`}
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     portrait
@@ -215,18 +210,11 @@ function Nav() {
                 </div>
               )}
 
-              <div className="inline-flex w-full rounded-md font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white">
-                <Link
-                  to="/video"
-                  className="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
-                  onClick={() => setIsOpen(!isOpen)}
-                >
+              <div className={smallScreenDivLinkClasses}>
+                <Link to="/video" className={smallScreenLinkClasses} onClick={() => setIsOpen(!isOpen)}>
                   video
                 </Link>
-                <button
-                  className="w-full rounded-r-md py-2 pr-1 hover:bg-neutral-600 hover:text-white"
-                  onClick={() => handleVideoClick()}
-                >
+                <button className={smallScreenBtnClasses} onClick={() => handleVideoClick()}>
                   <svg
                     className="ml-1 h-4 w-4 self-center"
                     fill="currentColor"
@@ -246,7 +234,7 @@ function Nav() {
                 <div>
                   <Link
                     to="/video/fiction"
-                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    className={`${smallScreenLinkClasses} pl-6`}
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     fiction
@@ -254,7 +242,7 @@ function Nav() {
 
                   <Link
                     to="/video/non-fiction"
-                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    className={`${smallScreenLinkClasses} pl-6`}
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     non fiction
@@ -262,7 +250,7 @@ function Nav() {
 
                   <Link
                     to="/video/aerial-abstract"
-                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    className={`${smallScreenLinkClasses} pl-6`}
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     aerial + abstract
@@ -270,7 +258,7 @@ function Nav() {
 
                   <Link
                     to="/video/commercial"
-                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    className={`${smallScreenLinkClasses} pl-6`}
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     commercial
@@ -278,7 +266,7 @@ function Nav() {
 
                   <Link
                     to="/video/music"
-                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    className={`${smallScreenLinkClasses} pl-6`}
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     music
@@ -286,18 +274,14 @@ function Nav() {
                 </div>
               )}
 
-              <Link
-                to="/inside-out"
-                className="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
-                onClick={() => setIsOpen(!isOpen)}
-              >
+              <Link to="/inside-out" className={smallScreenLinkClasses} onClick={() => setIsOpen(!isOpen)}>
                 inside out
               </Link>
 
               <Link
                 to="https://spires.pic-time.com/-prints3168/gallery"
                 target="_blank"
-                className="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                className={smallScreenLinkClasses}
                 onClick={() => setIsOpen(!isOpen)}
               >
                 buy prints

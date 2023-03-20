@@ -9,12 +9,12 @@ function classNames(...classes) {
 
 function Dropdown({ topLink, links }) {
   return (
-    <Menu as="div" className="relative inline-block text-left z-50">
-      <div className="inline-flex w-full justify-center rounded-md font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white">
-        <Link to={topLink.link} className="rounded-l-md px-3 py-2 font-medium text-neutral-300 ">
+    <Menu as="div" className="relative z-50 inline-block text-left">
+      <div className="inline-flex w-full justify-center rounded-md text-neutral-700 hover:bg-neutral-300 hover:text-current dark:text-white dark:hover:bg-neutral-700">
+        <Link to={topLink.link} className="rounded-l-md px-3 py-2">
           {topLink.text}
         </Link>
-        <Menu.Button className="rounded-r-md py-2 pr-1 hover:bg-neutral-600 hover:text-white">
+        <Menu.Button className="rounded-r-md py-2 pr-1 text-neutral-700 hover:bg-neutral-400 hover:text-current dark:text-white dark:hover:bg-neutral-600">
           <svg
             className="ml-1 h-4 w-4 self-center"
             fill="currentColor"
@@ -39,14 +39,17 @@ function Dropdown({ topLink, links }) {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute mt-2 rounded-md bg-neutral-800">
+        <Menu.Items className="absolute mt-2 rounded-md bg-neutral-200 dark:bg-neutral-800">
           <div className="py-1">
             {links.map((link) => (
               <Menu.Item key={link.text}>
                 {({ active }) => (
                   <Link
                     to={link.link}
-                    className={classNames(active ? 'bg-neutral-700' : 'text-neutral-300', 'block px-4 py-2 text-sm')}
+                    className={classNames(
+                      active ? 'bg-neutral-300 dark:bg-neutral-700' : 'text-neutral-700 dark:text-neutral-300',
+                      'block px-4 py-2 text-sm',
+                    )}
                   >
                     {' '}
                     {link.text}

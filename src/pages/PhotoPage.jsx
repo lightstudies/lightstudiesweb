@@ -41,7 +41,7 @@ const PhotoPage = () => {
   // }, [data]);
 
   return (
-    <div className="gap-4 bg-zinc-800">
+    <div className="">
       <PageNav header="Photo" links={links} />
       <ProdibiGridEmbed container={containerId} account={PRODIBI_ACCOUNT} />
       {/* {data?.value.map((image) => (
