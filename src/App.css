@@ -1,8 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@layer base {
+/* @layer base {
   .App {
-    @apply flex h-full w-full flex-col;
+    @apply flex h-auto w-full flex-col text-white dark:bg-primary;
   }
+} */
+
+/* .footer {
+  @apply mt-auto w-full text-center;
+} */
+
+.main-container {
+  @apply flex min-h-screen w-full flex-col;
 }
+
+.main-content {
+  @apply flex-1;
+}
+
+.main-footer {
+  @apply mt-auto w-full text-center;
+}
+
+.prodibi {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100%;
+}
+
+.pt4x3 {
+  padding-top: 75%;
+}
+
+.pt16x10 {
+  padding-top: 62.5%;
+}
+
+.pt16x9 {
+  padding-top: 56.25%;
+}
+
+.pt1-85x1 {
+  padding-top: 54.054%;
+}
+
+.pt2x1 {
+  padding-top: 50%;
+}
+
+.pt2-35x1 {
+  padding-top: 42.553%;
+}
+
+

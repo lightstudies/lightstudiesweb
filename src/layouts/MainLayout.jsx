@@ -2,15 +2,18 @@ import { Nav } from '../components';
 import { Outlet } from 'react-router-dom';
 
 export const MainLayout = () => {
-
+  
   return (
-    <div className="flex flex-col h-full">
-      <Nav />
-      {/* <div className="App-header">Header</div> */}
-      <div className="flex-1">
-        <Outlet />
+    <div className="flex min-h-full flex-col items-center overflow-x-clip text-white dark:bg-primary">
+      <div className="w-full flex-initial">
+        <Nav />
       </div>
-      <div className="mt-auto">Footer</div>
+      <div className="w-full flex-auto self-stretch">
+        <div className="mx-auto max-w-[1280px] justify-center">
+          <Outlet />
+        </div>
+      </div>
+      <div className="flex-initial text-center">© Copyright 2023 Joshua Spires</div>
     </div>
   );
 };

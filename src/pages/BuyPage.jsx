@@ -1,7 +1,12 @@
+import PicTimeEmbed from '../components/PicTimeEmbed';
+
 const BuyPage = () => {
   return (
-    <div>BuyPage</div>
-  )
-}
+    <>
+      <div>BuyPage</div>
+      <PicTimeEmbed />
+    </>
+  );
+};
 
-export default BuyPage
+export default BuyPage;
