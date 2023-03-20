@@ -5,6 +5,18 @@ import Dropdown from './Dropdown';
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [subMenuState, setSubMenuState] = useState({
+    photo: false,
+    video: false,
+  });
+
+  const handlePhotoClick = () => {
+    setSubMenuState({ ...subMenuState, photo: !subMenuState.photo });
+  };
+
+  const handleVideoClick = () => {
+    setSubMenuState({ ...subMenuState, video: !subMenuState.video });
+  };
 
   const photoLinks = [
     { text: 'portrait', link: '/photo/portrait' },
@@ -13,7 +25,13 @@ function Nav() {
     { text: 'wedding', link: '/photo/wedding' },
   ];
 
-  const videoLinks = [{ text: 'portrait', link: '/video/portrait' }];
+  const videoLinks = [
+    { text: 'fiction', link: '/video/fiction' },
+    { text: 'non fiction', link: '/video/non-fiction' },
+    { text: 'aerial + abstract', link: '/video/aerial-abstract' },
+    { text: 'commercial', link: '/video/commercial' },
+    { text: 'music', link: '/video/music' },
+  ];
 
   return (
     <nav className="bg-neutral-800">
@@ -21,7 +39,10 @@ function Nav() {
         <div className="flex h-16 items-center">
           <div className="flex w-full items-center">
             <div className="mr-auto">
-              <span className="text-4xl">light studies.</span>
+              {/* logo/name */}
+              <Link to="/" className="text-4xl">
+                light studies.
+              </Link>
 
               {/* LOGO HERE */}
               {/* <img
@@ -53,7 +74,8 @@ function Nav() {
                 </Link>
 
                 <Link
-                  to="/buy"
+                  to="https://spires.pic-time.com/-prints3168/gallery"
+                  target="_blank"
                   className="rounded-md px-3 py-2 font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
                 >
                   buy prints
@@ -117,6 +139,7 @@ function Nav() {
               <Link
                 to="/"
                 className="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                onClick={() => setIsOpen(!isOpen)}
               >
                 home
               </Link>
@@ -124,69 +147,158 @@ function Nav() {
               <Link
                 to="/about"
                 className="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                onClick={() => setIsOpen(!isOpen)}
               >
                 about
               </Link>
 
-              <Link
-                to="/photo"
-                className="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
-              >
-                photo
-              </Link>
+              <div className="inline-flex w-full rounded-md font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white">
+                <Link
+                  to="/photo"
+                  className="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                  onClick={() => setIsOpen(!isOpen)}
+                >
+                  photo
+                </Link>
+                <button
+                  className="w-full rounded-r-md py-2 pr-1 hover:bg-neutral-600 hover:text-white"
+                  onClick={() => handlePhotoClick()}
+                >
+                  <svg
+                    className="ml-1 h-4 w-4 self-center"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
 
-              <Link
-                to="/photo/real-estate"
-                className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
-              >
-                real estate
-              </Link>
+              {subMenuState?.photo && (
+                <div>
+                  <Link
+                    to="/photo/real-estate"
+                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    onClick={() => setIsOpen(!isOpen)}
+                  >
+                    real estate
+                  </Link>
 
-              <Link
-                to="/photo/underwater"
-                className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
-              >
-                underwater
-              </Link>
+                  <Link
+                    to="/photo/underwater"
+                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    onClick={() => setIsOpen(!isOpen)}
+                  >
+                    underwater
+                  </Link>
 
-              <Link
-                to="/photo/wedding"
-                className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
-              >
-                wedding
-              </Link>
+                  <Link
+                    to="/photo/wedding"
+                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    onClick={() => setIsOpen(!isOpen)}
+                  >
+                    wedding
+                  </Link>
 
-              <Link
-                to="/photo/portrait"
-                className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
-              >
-                portrait
-              </Link>
+                  <Link
+                    to="/photo/portrait"
+                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    onClick={() => setIsOpen(!isOpen)}
+                  >
+                    portrait
+                  </Link>
+                </div>
+              )}
 
-              <Link
-                to="/video"
-                className="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
-              >
-                video
-              </Link>
+              <div className="inline-flex w-full rounded-md font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white">
+                <Link
+                  to="/video"
+                  className="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                  onClick={() => setIsOpen(!isOpen)}
+                >
+                  video
+                </Link>
+                <button
+                  className="w-full rounded-r-md py-2 pr-1 hover:bg-neutral-600 hover:text-white"
+                  onClick={() => handleVideoClick()}
+                >
+                  <svg
+                    className="ml-1 h-4 w-4 self-center"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
 
-              <Link
-                to="/video/portrait"
-                className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
-              >
-                portrait
-              </Link>
+              {subMenuState?.video && (
+                <div>
+                  <Link
+                    to="/video/fiction"
+                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    onClick={() => setIsOpen(!isOpen)}
+                  >
+                    fiction
+                  </Link>
+
+                  <Link
+                    to="/video/non-fiction"
+                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    onClick={() => setIsOpen(!isOpen)}
+                  >
+                    non fiction
+                  </Link>
+
+                  <Link
+                    to="/video/aerial-abstract"
+                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    onClick={() => setIsOpen(!isOpen)}
+                  >
+                    aerial + abstract
+                  </Link>
+
+                  <Link
+                    to="/video/commercial"
+                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    onClick={() => setIsOpen(!isOpen)}
+                  >
+                    commercial
+                  </Link>
+
+                  <Link
+                    to="/video/music"
+                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    onClick={() => setIsOpen(!isOpen)}
+                  >
+                    music
+                  </Link>
+                </div>
+              )}
 
               <Link
                 to="/inside-out"
                 className="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                onClick={() => setIsOpen(!isOpen)}
               >
                 inside out
               </Link>
 
               <Link
-                to="/buy"
+                to="https://spires.pic-time.com/-prints3168/gallery"
+                target="_blank"
                 className="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                onClick={() => setIsOpen(!isOpen)}
               >
                 buy prints
               </Link>

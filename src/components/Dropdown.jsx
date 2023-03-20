@@ -9,7 +9,7 @@ function classNames(...classes) {
 
 function Dropdown({ topLink, links }) {
   return (
-    <Menu as="div" className="relative inline-block text-left z-10">
+    <Menu as="div" className="relative inline-block text-left z-50">
       <div className="inline-flex w-full justify-center rounded-md font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white">
         <Link to={topLink.link} className="rounded-l-md px-3 py-2 font-medium text-neutral-300 ">
           {topLink.text}
