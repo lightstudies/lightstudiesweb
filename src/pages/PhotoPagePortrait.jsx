@@ -6,7 +6,7 @@ const PhotoPagePortrait = () => {
   const containerId = 'oz9y48m07k9rd0m';
   useScript('../prodibi.embed.2.0.min.js');
   return (
-    <div className="gap-4 bg-zinc-800">
+    <div>
       <ProdibiGridEmbed container={containerId} account={PRODIBI_ACCOUNT} />
     </div>
   );

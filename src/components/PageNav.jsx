@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const PageNav = ({ header, links }) => {
+const PageNav = ({ links }) => {
   return (
     <div className="pt-5 flex flex-col">
-      <div className="self-center text-8xl">{header}</div>
       <div className="my-5 flex flex-row flex-wrap justify-between sm:justify-center">
         {links.map((link) => (
           <Link
@@ -21,7 +20,6 @@ const PageNav = ({ header, links }) => {
 };
 
 PageNav.propTypes = {
-  header: PropTypes.string.isRequired,
   links: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string.isRequired,

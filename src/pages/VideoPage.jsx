@@ -53,7 +53,7 @@ const VideoPage = () => {
 
   return (
     <div>
-      <PageNav header="Video" links={links} />
+      <PageNav links={links} />
       <ResponsiveGrid elementArray={gridItems} />
     </div>
   );

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Transition } from '@headlessui/react';
-import { Link } from 'react-router-dom';
-import Dropdown from './Dropdown';
+import { Link, NavLink } from 'react-router-dom';
+import DropdownLink from './DropdownLink';
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,13 +34,13 @@ function Nav() {
   ];
 
   return (
-    <nav className="bg-neutral-800">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center">
-          <div className="flex w-full items-center">
-            <div className="mr-auto">
+    <nav>
+      <div className="sm:px-6 lg:px-0 mx-auto max-w-7xl px-4 text-neutral-200">
+        <div className="flex h-16 items-stretch">
+          <div className="flex w-full items-stretch">
+            <div className="mr-auto self-center">
               {/* logo/name */}
-              <Link to="/" className="text-4xl">
+              <Link to="/" className="whitespace-nowrap text-4xl dark:text-white">
                 light studies.
               </Link>
 
@@ -51,43 +51,56 @@ function Nav() {
                 alt="Workflow"
               /> */}
             </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <Link to="/" className="rounded-md px-3 py-2 font-medium text-white hover:bg-neutral-700">
+            <div className="hidden md+:block">
+              <div className="ml-10 flex space-x-4 text-2xl">
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive
+                      ? 'px-3 py-4 dark:bg-neutral-700 dark:text-white'
+                      : 'px-3 py-4 dark:hover:bg-neutral-700 dark:hover:text-white'
+                  }
+                >
                   home
-                </Link>
+                </NavLink>
 
-                <Link
+                <NavLink
                   to="/about"
-                  className="rounded-md px-3 py-2 font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                  className={({ isActive }) =>
+                    isActive
+                      ? 'px-3 py-4 dark:bg-neutral-700 dark:text-white'
+                      : 'px-3 py-4 dark:hover:bg-neutral-700 dark:hover:text-white'
+                  }
                 >
                   about
-                </Link>
-                <Dropdown topLink={{ text: 'photo', link: '/photo' }} links={photoLinks} />
-                <Dropdown topLink={{ text: 'video', link: '/video' }} links={videoLinks} />
+                </NavLink>
+                <DropdownLink topLink={{ text: 'photo', path: '/photo' }} links={photoLinks} />
+                <DropdownLink topLink={{ text: 'video', path: '/video' }} links={videoLinks} />
 
-                <Link
+                <NavLink
                   to="/inside-out"
-                  className="rounded-md px-3 py-2 font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
-                >
-                  inside out
-                </Link>
+                  className={({ isActive }) =>
+                    isActive
+                      ? 'px-3 py-4 dark:bg-neutral-700 dark:text-white'
+                      : 'px-3 py-4 dark:hover:bg-neutral-700 dark:hover:text-white'
+                  }
+                >inside out</NavLink>
 
                 <Link
                   to="https://spires.pic-time.com/-prints3168/gallery"
                   target="_blank"
-                  className="rounded-md px-3 py-2 font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                  className="whitespace-nowrap px-3 py-4 dark:hover:bg-neutral-700 dark:hover:text-white"
                 >
                   buy prints
                 </Link>
               </div>
             </div>
           </div>
-          <div className="-mr-2 flex md:hidden">
+          <div className="-mr-2 flex md+:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="inline-flex items-center justify-center rounded-md bg-neutral-900 p-2 text-neutral-400 hover:bg-neutral-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              className="inline-flex items-center justify-center bg-neutral-900 p-2 text-neutral-400 hover:bg-neutral-800 hover:text-white "
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -128,40 +141,37 @@ function Nav() {
         leave="transition ease-in duration-75 transform"
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
+        className="fixed left-0 z-50 w-full bg-neutral-900"
       >
         {(ref) => (
-          <div className="md:hidden" id="mobile-menu">
-            <div {...ref} className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
-              {/* <Link to="#" className="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-neutral-700">
-                    Dashboard
-                  </Link> */}
-
-              <Link
+          <div className="md+:hidden" id="mobile-menu">
+            <div {...ref} className="sm:px-3 space-y-1 px-2 pt-2 pb-3 text-2xl">
+              <NavLink
                 to="/"
-                className="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                className="block px-3 py-2 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 home
-              </Link>
+              </NavLink>
 
-              <Link
+              <NavLink
                 to="/about"
-                className="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                className="block px-3 py-2 text-neutral-300 hover:bg-neutral-700 hover:text-white active:bg-white"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 about
-              </Link>
+              </NavLink>
 
-              <div className="inline-flex w-full rounded-md font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white">
-                <Link
+              <div className="inline-flex w-full text-neutral-300 hover:bg-neutral-700 hover:text-white">
+                <NavLink
                   to="/photo"
-                  className="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                  className="block px-3 py-2 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                   onClick={() => setIsOpen(!isOpen)}
                 >
                   photo
-                </Link>
+                </NavLink>
                 <button
-                  className="w-full rounded-r-md py-2 pr-1 hover:bg-neutral-600 hover:text-white"
+                  className="w-full py-2 pr-1 hover:bg-neutral-600 hover:text-white"
                   onClick={() => handlePhotoClick()}
                 >
                   <svg
@@ -181,50 +191,50 @@ function Nav() {
 
               {subMenuState?.photo && (
                 <div>
-                  <Link
+                  <NavLink
                     to="/photo/real-estate"
-                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    className="block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     real estate
-                  </Link>
+                  </NavLink>
 
-                  <Link
+                  <NavLink
                     to="/photo/underwater"
-                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    className="block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     underwater
-                  </Link>
+                  </NavLink>
 
-                  <Link
+                  <NavLink
                     to="/photo/wedding"
-                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    className="block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     wedding
-                  </Link>
+                  </NavLink>
 
-                  <Link
+                  <NavLink
                     to="/photo/portrait"
-                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    className="block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     portrait
-                  </Link>
+                  </NavLink>
                 </div>
               )}
 
-              <div className="inline-flex w-full rounded-md font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white">
-                <Link
+              <div className="inline-flex w-full text-neutral-300 hover:bg-neutral-700 hover:text-white">
+                <NavLink
                   to="/video"
-                  className="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                  className="block px-3 py-2 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                   onClick={() => setIsOpen(!isOpen)}
                 >
                   video
-                </Link>
+                </NavLink>
                 <button
-                  className="w-full rounded-r-md py-2 pr-1 hover:bg-neutral-600 hover:text-white"
+                  className="w-full py-2 pr-1 hover:bg-neutral-600 hover:text-white"
                   onClick={() => handleVideoClick()}
                 >
                   <svg
@@ -244,60 +254,60 @@ function Nav() {
 
               {subMenuState?.video && (
                 <div>
-                  <Link
+                  <NavLink
                     to="/video/fiction"
-                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    className="block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     fiction
-                  </Link>
+                  </NavLink>
 
-                  <Link
+                  <NavLink
                     to="/video/non-fiction"
-                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    className="block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     non fiction
-                  </Link>
+                  </NavLink>
 
-                  <Link
+                  <NavLink
                     to="/video/aerial-abstract"
-                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    className="block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     aerial + abstract
-                  </Link>
+                  </NavLink>
 
-                  <Link
+                  <NavLink
                     to="/video/commercial"
-                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    className="block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     commercial
-                  </Link>
+                  </NavLink>
 
-                  <Link
+                  <NavLink
                     to="/video/music"
-                    className="block rounded-md px-3 py-2 pl-6 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                    className="block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     music
-                  </Link>
+                  </NavLink>
                 </div>
               )}
 
-              <Link
+              <NavLink
                 to="/inside-out"
-                className="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                className="block px-3 py-2 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 inside out
-              </Link>
+              </NavLink>
 
               <Link
                 to="https://spires.pic-time.com/-prints3168/gallery"
                 target="_blank"
-                className="block rounded-md px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                className="block px-3 py-2 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 buy prints

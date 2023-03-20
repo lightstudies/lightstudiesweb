@@ -2,6 +2,7 @@ import {
   AboutPage,
   HomePage,
   InsideOutPage,
+  InsideOutEmbedPage,
   PhotoPage,
   PhotoPagePortrait,
   PhotoPageRealEstate,
@@ -40,11 +41,11 @@ const Routes = () => {
           <Route path="music" element={<VideoPageMusic />} />
           <Route path="the-whale" element={<VideoPageTheWhale />} />
         </Route>
-        {/* <Route path="buy" element={<BuyPage />} /> */}
+        <Route path="inside-out" element={<InsideOutPage />} />
       </Route>
 
       <Route element={<FullPageLayout />}>
-        <Route path="inside-out" element={<InsideOutPage />} />
+        <Route path="inside-out/buy" element={<InsideOutEmbedPage />} />
       </Route>
     </RouterRoutes>
   );

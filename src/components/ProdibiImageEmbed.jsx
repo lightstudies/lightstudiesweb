@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const ProdibiImageEmbed = ({ id, account, title, height, width, className }) => {
   const prodibiData = {
@@ -9,13 +9,11 @@ const ProdibiImageEmbed = ({ id, account, title, height, width, className }) => 
     height,
     branding: false,
     widthMode: 'aspectRatio',
-    heightMode: '100vh',
-  }
+    heightMode: '90vh',
+  };
 
-  return (
-    <canvas className={className} data-prodibi={JSON.stringify(prodibiData)} ></canvas>
-  )
-}
+  return <canvas className={className} data-prodibi={JSON.stringify(prodibiData)}></canvas>;
+};
 
 ProdibiImageEmbed.propTypes = {
   id: PropTypes.string.isRequired,
@@ -24,6 +22,6 @@ ProdibiImageEmbed.propTypes = {
   height: PropTypes.number.isRequired,
   width: PropTypes.number.isRequired,
   className: PropTypes.string,
-}
+};
 
-export default ProdibiImageEmbed
+export default ProdibiImageEmbed;

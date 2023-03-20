@@ -1,22 +1,29 @@
 import { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Menu, Transition } from '@headlessui/react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-function Dropdown({ topLink, links }) {
+function DropdownLink({ topLink, links }) {
+  const location = useLocation();
   return (
-    <Menu as="div" className="relative inline-block text-left z-50">
-      <div className="inline-flex w-full justify-center rounded-md font-medium text-neutral-300 hover:bg-neutral-700 hover:text-white">
-        <Link to={topLink.link} className="rounded-l-md px-3 py-2 font-medium text-neutral-300 ">
+    <Menu as="div" className="relative z-40 inline-block">
+      <div
+        className={
+          location.pathname.split("/")[1] === topLink.path.split('/')[1]
+            ? 'inline-flex w-full justify-center dark:bg-neutral-700 dark:text-white'
+            : 'inline-flex w-full justify-center dark:hover:bg-neutral-700 dark:hover:text-white'
+        }
+      >
+        <Link to={topLink.path} className="px-3 py-4">
           {topLink.text}
         </Link>
-        <Menu.Button className="rounded-r-md py-2 pr-1 hover:bg-neutral-600 hover:text-white">
+        <Menu.Button className="py-2 pr-1 dark:hover:bg-neutral-600 dark:hover:text-white">
           <svg
-            className="ml-1 h-4 w-4 self-center"
+            className="ml-1 w-6 self-center"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -39,10 +46,10 @@ function Dropdown({ topLink, links }) {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute mt-2 rounded-md bg-neutral-800">
-          <div className="py-1">
+        <Menu.Items className="absolute min-w-max bg-neutral-800">
+          <div>
             {links.map((link) => (
-              <Menu.Item key={link.text}>
+              <Menu.Item key={link.text} className="text-2xl">
                 {({ active }) => (
                   <Link
                     to={link.link}
@@ -61,10 +68,10 @@ function Dropdown({ topLink, links }) {
   );
 }
 
-Dropdown.propTypes = {
+DropdownLink.propTypes = {
   topLink: PropTypes.shape({
     text: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
+    path: PropTypes.string.isRequired,
   }).isRequired,
   links: PropTypes.arrayOf(
     PropTypes.shape({
@@ -74,4 +81,4 @@ Dropdown.propTypes = {
   ).isRequired,
 };
 
-export default Dropdown;
+export default DropdownLink;

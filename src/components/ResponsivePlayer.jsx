@@ -33,7 +33,6 @@ const ResponsivePlayer = ({
       longFade: !playerState.playing,
       controlsVisible: playerState.playing,
     });
-    console.log('clicked play/pause, player state:', playerState);
   };
 
   // const handleMouseMove = () => {
@@ -50,7 +49,6 @@ const ResponsivePlayer = ({
     // setIsHovering(false);
     // Hide controls when mouse leaves
     setPlayerState({ ...playerState, longFade: false, controlsVisible: false });
-    console.log('mouse left, player state:', playerState);
   };
 
   const handleMute = () => {
