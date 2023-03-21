@@ -3,7 +3,7 @@ import { Fragment, useState } from 'react';
 import PropTypes from 'prop-types';
 import ImageTile from './ImageTile';
 
-const ModalItem = ({ title, img, children }) => {
+const ModalItem = ({ title, img, invertTitle, children }) => {
   let [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
@@ -28,7 +28,7 @@ const ModalItem = ({ title, img, children }) => {
           </div>
         </button>
       </div> */}
-      <ImageTile title={title} img={img} onClick={handleClick} />
+      <ImageTile title={title} img={img} onClick={handleClick} invert={invertTitle}/>
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-40" onClose={closeModal}>
@@ -83,6 +83,7 @@ const ModalItem = ({ title, img, children }) => {
 ModalItem.propTypes = {
   title: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
+  invertTitle: PropTypes.bool,
   children: PropTypes.element,
 };
 export default ModalItem;

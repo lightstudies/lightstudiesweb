@@ -20,7 +20,7 @@ const VideoPageNonFiction = () => {
     <ModalItem key="nsBsUjlXJqk" title="Dirk Nowitzki Interview" img={DirkInterviews}>
       <ResponsivePlayer url="https://www.youtube.com/watch?v=nsBsUjlXJqk" parentClassName="pt2-35x1" playing controls />
     </ModalItem>,
-    <ModalItem key="426016821" title="Bridge 2" img={bridge}>
+    <ModalItem key="426016821" title="Bridge 2" img={bridge} invertTitle>
       <ResponsivePlayer url="https://player.vimeo.com/video/426016821" parentClassName="pt2-35x1" playing controls />
     </ModalItem>,
     <ModalItem key="300871783" title="One Constant: Poland" img={OneConstant}>
@@ -41,7 +41,7 @@ const VideoPageNonFiction = () => {
     <ModalItem key="85935795" title="Tommy" img={Tommy}>
       <ResponsivePlayer url="https://vimeo.com/85935795" parentClassName="pt16x9" playing controls />
     </ModalItem>,
-    <ModalItem key="88270840" title="Growing Up in China" img={GrowingUpInChina}>
+    <ModalItem key="88270840" title="Growing Up in China" img={GrowingUpInChina} invertTitle>
       <ResponsivePlayer url="https://vimeo.com/88270840" parentClassName="pt16x9" playing controls />
     </ModalItem>,
     <ModalItem key="Z2K9HeTyvPI" title="Hope: Feature" img={Hope}>
