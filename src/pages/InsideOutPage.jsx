@@ -4,7 +4,7 @@ import { PRODIBI_ACCOUNT } from '../constants';
 import { useScript } from '../hooks';
 
 const InsideOutPage = () => {
-  useScript('../prodibi.embed.2.0.min.js');
+  useScript('./prodibi.embed.2.0.min.js');
   return (
     <div className="flex h-auto flex-col gap-5 pt-5">
       <div className="font-default-sans text-2xl">
