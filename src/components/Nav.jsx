@@ -35,12 +35,17 @@ function Nav() {
 
   return (
     <nav>
-      <div className="mx-auto max-w-7xl px-4 text-neutral-200 sm:px-6 xl:px-0">
-        <div className="flex h-16 items-stretch">
-          <div className="flex w-full items-stretch">
-            <div className="mr-auto self-center">
+      <div>
+        <div className="flex items-center justify-between text-neutral-200 md+:mx-auto md+:block md+:max-w-screen-xl">
+          {/* md+ content */}
+          <div className="flex items-center justify-between">
+            {/* LOGO / Site-Name */}
+            <div className="flex h-16 items-center">
               {/* logo/name */}
-              <Link to="/" className="whitespace-nowrap text-4xl dark:text-white">
+              <Link
+                to="/"
+                className="pl-2 text-4xl dark:text-white max-[230px]:text-3xl max-[205px]:text-2xl max-[170px]:text-xl xl:pl-0"
+              >
                 light studies.
               </Link>
 
@@ -51,14 +56,15 @@ function Nav() {
                 alt="Workflow"
               /> */}
             </div>
+            {/* Links */}
             <div className="hidden md+:block">
-              <div className="ml-10 flex space-x-4 text-2xl">
+              <div className="flex text-2xl">
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
                     isActive
-                      ? 'px-3 py-4 dark:bg-neutral-700 dark:text-white'
-                      : 'px-3 py-4 dark:hover:bg-neutral-700 dark:hover:text-white'
+                      ? 'px-5 py-4 dark:bg-neutral-700 dark:text-white'
+                      : 'px-5 py-4 dark:hover:bg-neutral-700 dark:hover:text-white'
                   }
                 >
                   home
@@ -68,8 +74,8 @@ function Nav() {
                   to="/about"
                   className={({ isActive }) =>
                     isActive
-                      ? 'px-3 py-4 dark:bg-neutral-700 dark:text-white'
-                      : 'px-3 py-4 dark:hover:bg-neutral-700 dark:hover:text-white'
+                      ? 'px-5 py-4 dark:bg-neutral-700 dark:text-white'
+                      : 'px-5 py-4 dark:hover:bg-neutral-700 dark:hover:text-white'
                   }
                 >
                   about
@@ -81,8 +87,8 @@ function Nav() {
                   to="/inside-out"
                   className={({ isActive }) =>
                     isActive
-                      ? 'px-3 py-4 dark:bg-neutral-700 dark:text-white'
-                      : 'px-3 py-4 dark:hover:bg-neutral-700 dark:hover:text-white'
+                      ? 'px-5 py-4 dark:bg-neutral-700 dark:text-white'
+                      : 'px-5 py-4 dark:hover:bg-neutral-700 dark:hover:text-white'
                   }
                 >
                   inside out
@@ -91,25 +97,26 @@ function Nav() {
                 <Link
                   to="https://spires.pic-time.com/-prints3168/gallery"
                   target="_blank"
-                  className="whitespace-nowrap px-3 py-4 dark:hover:bg-neutral-700 dark:hover:text-white"
+                  className="whitespace-nowrap px-5 py-4 dark:hover:bg-neutral-700 dark:hover:text-white"
                 >
                   buy prints
                 </Link>
               </div>
             </div>
           </div>
-          <div className="-mr-2 flex md+:hidden">
+          {/* hamburger button */}
+          <div className="h-full md+:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="inline-flex items-center justify-center bg-neutral-900 p-2 text-neutral-400 hover:bg-neutral-800 hover:text-white "
+              className="flex h-full items-center justify-center bg-neutral-900 p-2 text-neutral-400 hover:bg-neutral-800 hover:text-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
               {!isOpen ? (
                 <svg
-                  className="block h-6 w-6"
+                  className="block h-6 w-10"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -120,7 +127,7 @@ function Nav() {
                 </svg>
               ) : (
                 <svg
-                  className="block h-6 w-6"
+                  className="block h-6 w-10"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"

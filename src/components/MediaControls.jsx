@@ -53,7 +53,7 @@ const MediaControls = ({ playerState, handleFullScreenMode, handleMute, handlePl
 
         <button
           onClick={handleFullScreenMode}
-          className="focus:shadow-outline h-15 w-15 absolute left-0 bottom-0 z-20 ml-2 inline-flex -translate-y-1/2 items-center justify-center rounded-sm border border-white p-2ß text-white transition-colors delay-75 duration-150 hover:border-transparent hover:bg-white hover:text-black md:text-xl"
+          className="focus:shadow-outline h-15 w-15 absolute left-0 bottom-0 z-20 ml-2 inline-flex -translate-y-1/2 items-center justify-center rounded-sm border border-white p-2 text-white transition-colors delay-75 duration-150 hover:border-transparent hover:bg-white hover:text-black md:text-xl"
         >
           <svg
             height="14px"

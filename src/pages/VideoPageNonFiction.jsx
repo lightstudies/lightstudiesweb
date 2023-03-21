@@ -17,7 +17,7 @@ const VideoPageNonFiction = () => {
     <ModalItem key="568956759" title="Erase the Trace" img={erase}>
       <ResponsivePlayer url="https://player.vimeo.com/video/568956759" parentClassName="pt16x9" playing controls />
     </ModalItem>,
-    <ModalItem key="nsBsUjlXJqk" title="Dirk Nowitzki Interview" img={DirkInterviews}>
+    <ModalItem key="nsBsUjlXJqk" title="41 Forever" img={DirkInterviews}>
       <ResponsivePlayer url="https://www.youtube.com/watch?v=nsBsUjlXJqk" parentClassName="pt2-35x1" playing controls />
     </ModalItem>,
     <ModalItem key="426016821" title="Bridge 2" img={bridge} invertTitle>
