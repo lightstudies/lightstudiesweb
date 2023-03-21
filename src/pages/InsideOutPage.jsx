@@ -4,10 +4,15 @@ import { PRODIBI_ACCOUNT } from '../constants';
 import { useScript } from '../hooks';
 
 const InsideOutPage = () => {
-  useScript('../prodibi.embed.2.0.min.js');
+  useScript('./prodibi.embed.2.0.min.js');
   return (
     <div className="flex h-auto flex-col gap-5 pt-5">
-      <div className="font-default-sans text-2xl">
+      <div className="flex justify-center">
+        <Link className="text-4xl" to="/inside-out/buy">
+          BUY PRINTS
+        </Link>
+      </div>
+      <div className="font-default-sans text-lg sm:text-2xl">
         <p>
           INSIDEOUT is a panoramic photography project I have been developing for many years across the globe. It is an
           attempt to re-imagine a familiar space as something dreamed or imagined. Personally, the result is linked to
@@ -26,11 +31,6 @@ const InsideOutPage = () => {
           commissioned for any outdoor space; landscape, architecture, urban, etc. Please contact me if you would like
           to discuss an INSIDEOUT commission. Thank you!
         </p>
-      </div>
-      <div>
-        <Link className="float-right text-3xl" to="/inside-out/buy">
-          buy prints
-        </Link>
       </div>
       <ProdibiImageEmbed
         className="flex-auto self-center"

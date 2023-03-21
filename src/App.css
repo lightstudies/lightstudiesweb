@@ -1,27 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* @layer base {
-  .App {
-    @apply flex h-auto w-full flex-col text-white dark:bg-primary;
-  }
-} */
-
-/* .footer {
-  @apply mt-auto w-full text-center;
-} */
-
-.main-container {
-  @apply flex min-h-screen w-full flex-col;
-}
-
-.main-content {
-  @apply flex-1;
-}
-
-.main-footer {
-  @apply mt-auto w-full text-center;
-}
 
 .prodibi {
   flex-grow: 1;

@@ -29,7 +29,7 @@ const VideoPageFiction = () => {
     <ModalItem key="302688922" title="Here I am" img={HereIam}>
       <ResponsivePlayer url="https://player.vimeo.com/video/302688922" parentClassName="pt2-35x1" playing controls />
     </ModalItem>,
-    <ModalItem key="86793409" title="Rescued: Trailer" img={rescued}>
+    <ModalItem key="86793409" title="Rescued: Trailer" img={rescued} invertTitle>
       <ResponsivePlayer url="https://player.vimeo.com/video/86793409" parentClassName="pt16x9" playing controls />
     </ModalItem>,
     <ModalItem key="211737522" title="Handel" img={handel}>
