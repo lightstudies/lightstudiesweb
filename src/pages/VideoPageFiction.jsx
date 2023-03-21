@@ -44,7 +44,6 @@ const VideoPageFiction = () => {
   ];
   return (
     <div>
-      <div className="text-3xl">fiction</div>
       <ResponsiveGrid elementArray={gridItems} />
     </div>
   );

@@ -9,7 +9,7 @@ const PageNav = ({ links }) => {
           <Link
             key={link.text}
             to={link.link}
-            className="w-1/8 mx-5 rounded-md px-10 text-center text-3xl text-neutral-300 hover:bg-neutral-700 hover:text-white"
+            className="w-1/8 mx-5 p-5 text-center text-3xl text-neutral-300 hover:bg-neutral-700 hover:text-white"
           >
             {link.text}
           </Link>

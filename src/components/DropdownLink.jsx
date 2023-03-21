@@ -1,11 +1,11 @@
 import { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Menu, Transition } from '@headlessui/react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ');
-}
+// function classNames(...classes) {
+//   return classes.filter(Boolean).join(' ');
+// }
 
 function DropdownLink({ topLink, links }) {
   const location = useLocation();
@@ -13,7 +13,7 @@ function DropdownLink({ topLink, links }) {
     <Menu as="div" className="relative z-40 inline-block">
       <div
         className={
-          location.pathname.split("/")[1] === topLink.path.split('/')[1]
+          location.pathname.split('/')[1] === topLink.path.split('/')[1]
             ? 'inline-flex w-full justify-center dark:bg-neutral-700 dark:text-white'
             : 'inline-flex w-full justify-center dark:hover:bg-neutral-700 dark:hover:text-white'
         }
@@ -49,16 +49,17 @@ function DropdownLink({ topLink, links }) {
         <Menu.Items className="absolute min-w-max bg-neutral-800">
           <div>
             {links.map((link) => (
-              <Menu.Item key={link.text} className="text-2xl">
-                {({ active }) => (
-                  <Link
-                    to={link.link}
-                    className={classNames(active ? 'bg-neutral-700' : 'text-neutral-300', 'block px-4 py-2 text-sm')}
-                  >
-                    {' '}
-                    {link.text}
-                  </Link>
-                )}
+              <Menu.Item key={link.text} className="block px-4 py-2 text-2xl">
+                <NavLink
+                  to={link.link}
+                  className={({ isActive }) =>
+                    isActive
+                      ? 'bg-neutral-700 text-white'
+                      : 'text-neutral-300 hover:bg-neutral-700 hover:text-white'
+                  }
+                >
+                  {link.text}
+                </NavLink>
               </Menu.Item>
             ))}
           </div>
