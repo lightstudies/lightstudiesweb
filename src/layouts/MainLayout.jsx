@@ -2,9 +2,8 @@ import { Nav } from '../components';
 import { Outlet } from 'react-router-dom';
 
 export const MainLayout = () => {
-  
   return (
-    <div className="flex min-h-full flex-col items-center overflow-x-clip text-white dark:bg-primary">
+    <div className="flex min-h-full flex-col items-center overflow-x-clip text-white dark:bg-neutral-900">
       <div className="w-full flex-initial">
         <Nav />
       </div>

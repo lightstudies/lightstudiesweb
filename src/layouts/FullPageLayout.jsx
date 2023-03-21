@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 
 export const FullPageLayout = () => {
   return (
-    <div className="flex h-full w-full flex-col items-center text-white dark:bg-primary">
+    <div className="flex h-full w-full flex-col items-center text-white dark:bg-neutral-900">
       <div className="flex-initial self-stretch">
         <Nav />
       </div>

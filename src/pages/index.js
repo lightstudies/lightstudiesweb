@@ -2,6 +2,7 @@ export { default as AboutPage } from "./AboutPage";
 export { default as BuyPage } from "./BuyPage";
 export { default as HomePage } from "./HomePage";
 export { default as InsideOutPage } from "./InsideOutPage";
+export { default as InsideOutEmbedPage } from "./InsideOutEmbedPage";
 export { default as PhotoPage } from "./PhotoPage";
 export { default as PhotoPagePortrait } from "./PhotoPagePortrait";
 export { default as PhotoPageRealEstate } from "./PhotoPageRealEstate";

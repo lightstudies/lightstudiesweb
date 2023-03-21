@@ -6,7 +6,7 @@ const PhotoPageWedding = () => {
   const containerId = 'jvegrjgvemxklx5';
   useScript('../prodibi.embed.2.0.min.js');
   return (
-    <div className="gap-4 bg-zinc-800">
+    <div>
       <ProdibiGridEmbed container={containerId} account={PRODIBI_ACCOUNT} />
       <ResponsivePlayer url="https://vimeo.com/97139512" className="pt16x9" controls/>
     </div>
