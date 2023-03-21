@@ -52,10 +52,10 @@ function DropdownLink({ topLink, links }) {
               <Menu.Item key={link.text} className="block px-4 py-2 text-2xl">
                 <NavLink
                   to={link.link}
-                  className={({ isActive }) =>
-                    isActive
-                      ? 'bg-neutral-700 text-white'
-                      : 'text-neutral-300 hover:bg-neutral-700 hover:text-white'
+                  className={
+                    location.pathname === link.link
+                      ? ' dark:bg-neutral-700 dark:text-white'
+                      : ' dark:hover:bg-neutral-700 dark:hover:text-white'
                   }
                 >
                   {link.text}

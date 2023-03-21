@@ -35,7 +35,7 @@ function Nav() {
 
   return (
     <nav>
-      <div className="mx-auto max-w-7xl px-4 text-neutral-200 sm:px-6 lg:px-0">
+      <div className="sm:px-6 xl:px-0 mx-auto max-w-7xl px-4 text-neutral-200">
         <div className="flex h-16 items-stretch">
           <div className="flex w-full items-stretch">
             <div className="mr-auto self-center">
@@ -84,9 +84,7 @@ function Nav() {
                       ? 'px-3 py-4 dark:bg-neutral-700 dark:text-white'
                       : 'px-3 py-4 dark:hover:bg-neutral-700 dark:hover:text-white'
                   }
-                >
-                  inside out
-                </NavLink>
+                >inside out</NavLink>
 
                 <Link
                   to="https://spires.pic-time.com/-prints3168/gallery"
@@ -147,14 +145,10 @@ function Nav() {
       >
         {(ref) => (
           <div className="md+:hidden" id="mobile-menu">
-            <div {...ref} className="space-y-1 px-2 pt-2 pb-3 text-2xl sm:px-3">
+            <div {...ref} className="sm:px-3 space-y-1 px-2 pt-2 pb-3 text-2xl">
               <NavLink
                 to="/"
-                className={({ isActive }) =>
-                  isActive
-                    ? 'block bg-neutral-700 px-3 py-2 text-white'
-                    : 'block px-3 py-2 text-neutral-300 hover:bg-neutral-700 hover:text-white'
-                }
+                className="block px-3 py-2 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 home
@@ -162,11 +156,7 @@ function Nav() {
 
               <NavLink
                 to="/about"
-                className={({ isActive }) =>
-                  isActive
-                    ? 'block bg-neutral-700 px-3 py-2 text-white'
-                    : 'block px-3 py-2 text-neutral-300 hover:bg-neutral-700 hover:text-white'
-                }
+                className="block px-3 py-2 text-neutral-300 hover:bg-neutral-700 hover:text-white active:bg-white"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 about
@@ -175,11 +165,7 @@ function Nav() {
               <div className="inline-flex w-full text-neutral-300 hover:bg-neutral-700 hover:text-white">
                 <NavLink
                   to="/photo"
-                  className={({ isActive }) =>
-                    isActive
-                      ? 'block bg-neutral-700 px-3 py-2 text-white'
-                      : 'block px-3 py-2 text-neutral-300 hover:bg-neutral-700 hover:text-white'
-                  }
+                  className="block px-3 py-2 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                   onClick={() => setIsOpen(!isOpen)}
                 >
                   photo
@@ -207,11 +193,7 @@ function Nav() {
                 <div>
                   <NavLink
                     to="/photo/real-estate"
-                    className={({ isActive }) =>
-                      isActive
-                        ? 'block bg-neutral-700 px-3 py-2 pl-6 text-white'
-                        : 'block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white'
-                    }
+                    className="block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     real estate
@@ -219,11 +201,7 @@ function Nav() {
 
                   <NavLink
                     to="/photo/underwater"
-                    className={({ isActive }) =>
-                      isActive
-                        ? 'block bg-neutral-700 px-3 py-2 pl-6 text-white'
-                        : 'block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white'
-                    }
+                    className="block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     underwater
@@ -231,11 +209,7 @@ function Nav() {
 
                   <NavLink
                     to="/photo/wedding"
-                    className={({ isActive }) =>
-                      isActive
-                        ? 'block bg-neutral-700 px-3 py-2 pl-6 text-white'
-                        : 'block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white'
-                    }
+                    className="block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     wedding
@@ -243,11 +217,7 @@ function Nav() {
 
                   <NavLink
                     to="/photo/portrait"
-                    className={({ isActive }) =>
-                      isActive
-                        ? 'block bg-neutral-700 px-3 py-2 pl-6 text-white'
-                        : 'block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white'
-                    }
+                    className="block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     portrait
@@ -258,11 +228,7 @@ function Nav() {
               <div className="inline-flex w-full text-neutral-300 hover:bg-neutral-700 hover:text-white">
                 <NavLink
                   to="/video"
-                  className={({ isActive }) =>
-                    isActive
-                      ? 'block bg-neutral-700 px-3 py-2 text-white'
-                      : 'block px-3 py-2 text-neutral-300 hover:bg-neutral-700 hover:text-white'
-                  }
+                  className="block px-3 py-2 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                   onClick={() => setIsOpen(!isOpen)}
                 >
                   video
@@ -290,11 +256,7 @@ function Nav() {
                 <div>
                   <NavLink
                     to="/video/fiction"
-                    className={({ isActive }) =>
-                      isActive
-                        ? 'block bg-neutral-700 px-3 py-2 pl-6 text-white'
-                        : 'block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white'
-                    }
+                    className="block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     fiction
@@ -302,11 +264,7 @@ function Nav() {
 
                   <NavLink
                     to="/video/non-fiction"
-                    className={({ isActive }) =>
-                      isActive
-                        ? 'block bg-neutral-700 px-3 py-2 pl-6 text-white'
-                        : 'block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white'
-                    }
+                    className="block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     non fiction
@@ -314,11 +272,7 @@ function Nav() {
 
                   <NavLink
                     to="/video/aerial-abstract"
-                    className={({ isActive }) =>
-                      isActive
-                        ? 'block bg-neutral-700 px-3 py-2 pl-6 text-white'
-                        : 'block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white'
-                    }
+                    className="block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     aerial + abstract
@@ -326,11 +280,7 @@ function Nav() {
 
                   <NavLink
                     to="/video/commercial"
-                    className={({ isActive }) =>
-                      isActive
-                        ? 'block bg-neutral-700 px-3 py-2 pl-6 text-white'
-                        : 'block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white'
-                    }
+                    className="block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     commercial
@@ -338,11 +288,7 @@ function Nav() {
 
                   <NavLink
                     to="/video/music"
-                    className={({ isActive }) =>
-                      isActive
-                        ? 'block bg-neutral-700 px-3 py-2 pl-6 text-white'
-                        : 'block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white'
-                    }
+                    className="block px-3 py-2 pl-6 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     music
@@ -352,11 +298,7 @@ function Nav() {
 
               <NavLink
                 to="/inside-out"
-                className={({ isActive }) =>
-                  isActive
-                    ? 'block bg-neutral-700 px-3 py-2 text-white'
-                    : 'block px-3 py-2 text-neutral-300 hover:bg-neutral-700 hover:text-white'
-                }
+                className="block px-3 py-2 text-neutral-300 hover:bg-neutral-700 hover:text-white"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 inside out

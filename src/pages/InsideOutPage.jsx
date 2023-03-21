@@ -28,7 +28,7 @@ const InsideOutPage = () => {
         </p>
       </div>
       <div>
-        <Link className="text-3xl" to="/inside-out/buy">
+        <Link className="float-right text-3xl" to="/inside-out/buy">
           buy prints
         </Link>
       </div>
