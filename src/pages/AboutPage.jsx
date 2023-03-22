@@ -7,10 +7,36 @@ const AboutPage = () => {
     <div className="flex flex-1 flex-col flex-wrap">
       <div className="md:flex-column flex flex-col justify-center">
         <img src={imgURL} alt="joshua spires camera" className="flex-1" />
-        <div className="w-full flex-1 text-9xl">hi</div>
-        <div className="text-3xl">my name is josh.</div>
-        {/* <img src={imgURL} alt="joshua spires" className="flex-1" /> */}
-        {/* <img src={imgURL} alt="joshua spires" className="flex-1" /> */}
+        <div className="py-2 px-4 font-default-sans text-lg sm:text-3xl xl:px-0">
+          <p>Hi! My name is Josh (Spires)</p>
+          <br />
+          <p>Photographer + Cinematographer</p>
+          <br />
+          <p>Shooting professionally since 2008</p>
+          <br />
+          <p>Focused on: Underwater + Music + Real Estate + Fine Art</p>
+          <br />
+
+          <ul className="list-inside list-disc">
+            <li>Part.107 FAA certified drone pilot</li>
+            <li>FII-1 certified freediver</li>
+            <li>Certified Open Water SCUBA diver</li>
+            <li>Internationally award winning DP</li>
+          </ul>
+          <br />
+          <ul className="list-inside list-disc">
+            <li>Filming on: RED</li>
+            <li>Stills on: Sony Alpha</li>
+            <li>Flying with: Mavic 3</li>
+            <li>Diving with: AQUATECH</li>
+            <li>location: anywhere (currently my gear is in Houston, TX)</li>
+          </ul>
+          <br />
+          <p>
+            Want to capture something unexpected? Find out what the light looks like from another angle? Email me and
+            let’s shoot some magic.
+          </p>
+        </div>
         <div className="flex justify-end">
           <Link to="mailto:light.studies@gmail.com" target="_blank">
             <svg
@@ -18,7 +44,7 @@ const AboutPage = () => {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
-              className="h-20 w-20 dark:stroke-white dark:hover:bg-white dark:hover:stroke-black"
+              className="h-10 w-10 dark:stroke-white dark:hover:bg-white dark:hover:stroke-black sm:h-20 sm:w-20"
             >
               <path
                 strokeLinecap="round"
@@ -34,7 +60,7 @@ const AboutPage = () => {
               width="24"
               height="24"
               viewBox="0 0 24 24"
-              className="h-20 w-20 p-2 dark:fill-white dark:hover:bg-white dark:hover:fill-black dark:hover:stroke-black"
+              className="h-10 w-10 p-2 dark:fill-white dark:hover:bg-white dark:hover:fill-black dark:hover:stroke-black sm:h-20 sm:w-20"
             >
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
             </svg>

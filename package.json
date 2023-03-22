@@ -8,6 +8,7 @@
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
+    "dev-host": "vite --host",
     "lint": "eslint . --ext .js,.jsx",
     "build": "vite build",
     "preview": "vite preview"

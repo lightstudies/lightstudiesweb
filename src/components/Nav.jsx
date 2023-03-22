@@ -144,13 +144,13 @@ function Nav() {
 
       <Transition
         show={isOpen}
-        enter="transition ease-out duration-100 transform"
+        enter="transition ease-out duration-400 transform"
         enterFrom="opacity-0 scale-95"
         enterTo="opacity-100 scale-100"
-        leave="transition ease-in duration-75 transform"
+        leave="transition ease-in duration-400 transform"
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
-        className="fixed left-0 z-50 w-full bg-neutral-900"
+        className="sticky left-0 z-50 w-full bg-neutral-900"
       >
         {(ref) => (
           <div className="md+:hidden" id="mobile-menu">
