@@ -7,7 +7,7 @@ const VideoPageTheWhale = () => {
       <div className="pt-2 px-4 font-default-sans text-lg sm:text-2xl xl:px-0">
         <p>
           The Whale was our capstone short film which I shot on Super 16mm. It later would win the Kodak International
-          Cinematography Award, and we screened it in France at the Clermont-Ferrand International Short Film Festival.
+          Cinematography Award, and we screened it in France at the <Link to="https://clermont-filmfest.org/en/" target="_blank">Clermont-Ferrand International Short Film Festival</Link>.
           Below is the trailer, a link to the feature, and a special feature I cut after the screening run.
         </p>
         <br />
@@ -31,7 +31,7 @@ const VideoPageTheWhale = () => {
           to="https://vimeo.com/26554625"
           target="_blank"
         >
-          Watch The Whale Feature Film on Vimeo
+          watch the whale short film on Vimeo
         </Link>
       </div>
       <div className="flex justify-center">
@@ -40,7 +40,7 @@ const VideoPageTheWhale = () => {
           to="https://www.indiewire.com/2011/11/kodak-unveils-2011-film-school-cinematography-competition-winners-51348/"
           target="_blank"
         >
-          Indie Wire article
+          Kodak international cinematography award
         </Link>
       </div>
 
