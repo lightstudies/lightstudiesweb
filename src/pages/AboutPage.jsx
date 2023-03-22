@@ -7,10 +7,36 @@ const AboutPage = () => {
     <div className="flex flex-1 flex-col flex-wrap">
       <div className="md:flex-column flex flex-col justify-center">
         <img src={imgURL} alt="joshua spires camera" className="flex-1" />
-        <div className="w-full flex-1 text-9xl">hi</div>
-        <div className="text-3xl">my name is josh.</div>
-        {/* <img src={imgURL} alt="joshua spires" className="flex-1" /> */}
-        {/* <img src={imgURL} alt="joshua spires" className="flex-1" /> */}
+        <div className="xl:px-0 py-2 px-4 font-default-sans text-lg sm:text-3xl">
+          <p>Hi! My name is Josh (Spires)</p>
+          <br />
+          <p>Photographer + Cinematographer</p>
+          <br />
+          <p>Shooting professionally since 2008</p>
+          <br />
+          <p>Focused on: Underwater + Music + Real Estate + Fine Art</p>
+          <br />
+
+          <ul className="list-inside list-disc">
+            <li>Part.107 FAA certified drone pilot</li>
+            <li>FII-1 certified freediver</li>
+            <li>Certified Open Water SCUBA diver</li>
+            <li>Internationally award winning DP</li>
+          </ul>
+          <br />
+          <ul className="list-inside list-disc">
+            <li>Filming on: RED</li>
+            <li>Stills on: Sony Alpha</li>
+            <li>Flying with: Mavic 3</li>
+            <li>Diving with: AQUATECH</li>
+            <li>location: anywhere (currently my gear is in Houston, TX)</li>
+          </ul>
+          <br />
+          <p>
+            Want to capture something unexpected? Find out what the light looks like from another angle? Email me and
+            let’s shoot some magic.
+          </p>
+        </div>
         <div className="flex justify-end">
           <Link to="mailto:light.studies@gmail.com" target="_blank">
             <svg
