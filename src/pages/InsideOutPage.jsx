@@ -36,13 +36,15 @@ const InsideOutPage = () => {
           light.studies@gmail.com
         </Link>
       </div>
-      <ProdibiImageEmbed
-        className="flex-auto self-center"
-        id="oz9y45eylk2d1jq"
-        account={PRODIBI_ACCOUNT}
-        height={13800}
-        width={27700}
-      />
+      <div className="flex">
+        <div className="flex-1">
+          <ProdibiImageEmbed className="flex-auto" id="1zq70jdql4y9y62" account={PRODIBI_ACCOUNT} height={15050} width={15050} />
+        </div>
+
+        <div className="flex-1">
+          <ProdibiImageEmbed className="flex-auto" id="9zdr9jxr0g2718v" account={PRODIBI_ACCOUNT} height={13866} width={13866} />
+        </div>
+      </div>
     </div>
   );
 };
