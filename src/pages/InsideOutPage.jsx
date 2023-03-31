@@ -8,29 +8,33 @@ const InsideOutPage = () => {
   return (
     <div className="flex h-auto flex-col gap-5 pt-5">
       <div className="flex justify-center">
-        <Link className="text-4xl" to="/inside-out/buy">
+        <Link className="text-6xl hover:bg-neutral-700 hover:text-white" to="/inside-out/buy">
           BUY PRINTS
         </Link>
       </div>
-      <div className="font-default-sans text-lg sm:text-2xl">
+      <div className="px-2 font-default-sans text-lg sm:text-2xl xl:px-0">
         <p>
-          INSIDEOUT is a panoramic photography project I have been developing for many years across the globe. It is an
-          attempt to re-imagine a familiar space as something dreamed or imagined. Personally, the result is linked to
-          my fascination and pursuit of the possibilities a (Einstein-Rosenbridge) Worm-hole could afford if occasioned
-          in a space (mental or physical) familiar to us.
+          INSIDEOUT is a panoramic photography project I’ve developed for many years around the globe. It’s an attempt
+          to re-imagine a familiar space as something dreamed/imagined. The visual result stems from my pursuit of the
+          possibilities an Einstein-Rosen Bridge (wormhole) could afford if occasioned in a mental/physical space
+          familiar to us.
         </p>
         <br />
         <p>
-          These photographic results are intended to be viewed in an ultra large format in person, however I am making
-          them available for viewing/purchasing online in case one might like to order said large print. My preferred
-          format is acrylic, however I am offering a few other options that work well.
+          These are physical pieces intended for close viewing in ultra large format. Currently available for purchase,
+          the preferred format is acrylic; other print options are available.
         </p>
         <br />
         <p>
-          All that said: the real intent of both my project and this page is to open commissions. This work can be
-          commissioned for any outdoor space; landscape, architecture, urban, etc. Please contact me if you would like
-          to discuss an INSIDEOUT commission. Thank you!
+          Commissions for this project are OPEN. I can execute a piece for the outdoor space of one’s choosing
+          (landscape, urban, architecture, etc). Please [contact me] if you would like to discuss an INSIDEOUT
+          commission. Thank you!
         </p>
+        <br />
+
+        <Link to="mailto:light.studies@gmail.com" target="_blank" className="hover:bg-neutral-700 hover:text-white">
+          light.studies@gmail.com
+        </Link>
       </div>
       <ProdibiImageEmbed
         className="flex-auto self-center"

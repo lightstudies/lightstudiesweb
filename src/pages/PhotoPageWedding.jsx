@@ -7,8 +7,10 @@ const PhotoPageWedding = () => {
   useScript('../prodibi.embed.2.0.min.js');
   return (
     <div>
+      <ResponsivePlayer url="https://vimeo.com/97139512" parentClassName="pt16x9" controls/>
+      <ResponsivePlayer url="https://vimeo.com/381833265" parentClassName="pt16x9" controls/>
+      <ResponsivePlayer url="https://vimeo.com/223853392" parentClassName="pt16x9" controls/>
       <ProdibiGridEmbed container={containerId} account={PRODIBI_ACCOUNT} />
-      <ResponsivePlayer url="https://vimeo.com/97139512" className="pt16x9" controls/>
     </div>
   );
 };

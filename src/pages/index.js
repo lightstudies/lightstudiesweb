@@ -15,3 +15,4 @@ export { default as VideoPageFiction } from "./VideoPageFiction";
 export { default as VideoPageMusic } from "./VideoPageMusic";
 export { default as VideoPageNonFiction } from "./VideoPageNonFiction";
 export { default as VideoPageTheWhale } from "./VideoPageTheWhale";
+export { default as VideoPageHope } from "./VideoPageHope";

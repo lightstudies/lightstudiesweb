@@ -6,15 +6,17 @@ const AboutPage = () => {
   return (
     <div className="flex flex-1 flex-col flex-wrap">
       <div className="md:flex-column flex flex-col justify-center">
-        <img src={imgURL} alt="joshua spires camera" className="flex-1" />
+        <img src={imgURL} alt="joshua spires camera" className="flex-1 pb-4" />
         <div className="py-2 px-4 text-center font-default-sans text-lg sm:text-2xl xl:px-0">
-          <p>Hi! My name is Josh (Spires)</p>
+          <p>Hi! My name is Josh Spires</p>
           <br />
           <p>Photographer + Cinematographer</p>
           <br />
           <p>Shooting professionally since 2008</p>
           <br />
           <p>Focused on: Underwater + Music + Real Estate + Fine Art</p>
+          <br />
+          <p>Located: Anywhere (currently my gear is in Houston, TX)</p>
           <br />
 
           <ul>
@@ -29,7 +31,6 @@ const AboutPage = () => {
             <li>–  Stills on: Sony Alpha  –</li>
             <li>–  Flying with: Mavic 3  –</li>
             <li>–  Diving with: AQUATECH  –</li>
-            <li>–  location: anywhere (currently my gear is in Houston, TX)  –</li>
           </ul>
           <br />
           <p>
@@ -37,7 +38,7 @@ const AboutPage = () => {
             let’s shoot some magic.
           </p>
         </div>
-        <div className="flex justify-center pt-2">
+        <div className="flex justify-center py-4 gap-4">
           <Link to="mailto:light.studies@gmail.com" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
