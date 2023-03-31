@@ -22,7 +22,7 @@ function Nav() {
     { text: 'portrait', link: '/photo/portrait' },
     { text: 'real estate', link: '/photo/real-estate' },
     { text: 'underwater', link: '/photo/underwater' },
-    { text: 'wedding', link: '/photo/wedding' },
+    // { text: 'wedding', link: '/photo/wedding' },
   ];
 
   const videoLinks = [
@@ -46,7 +46,7 @@ function Nav() {
                 to="/"
                 className="pl-2 text-4xl dark:text-white max-[230px]:text-3xl max-[205px]:text-2xl max-[170px]:text-xl xl:pl-0"
               >
-                light studies.
+                light.studies
               </Link>
 
               {/* LOGO HERE */}
@@ -91,7 +91,7 @@ function Nav() {
                       : 'px-5 py-4 dark:hover:bg-neutral-700 dark:hover:text-white'
                   }
                 >
-                  inside out
+                  INSIDEOUT
                 </NavLink>
 
                 <Link
@@ -236,7 +236,7 @@ function Nav() {
                     underwater
                   </NavLink>
 
-                  <NavLink
+                  {/* <NavLink
                     to="/photo/wedding"
                     className={({ isActive }) =>
                       isActive
@@ -246,7 +246,7 @@ function Nav() {
                     onClick={() => setIsOpen(!isOpen)}
                   >
                     wedding
-                  </NavLink>
+                  </NavLink> */}
 
                   <NavLink
                     to="/photo/portrait"
@@ -366,7 +366,7 @@ function Nav() {
                 }
                 onClick={() => setIsOpen(!isOpen)}
               >
-                inside out
+                INSIDEOUT
               </NavLink>
 
               <Link

@@ -15,6 +15,7 @@ import {
   VideoPageCommercial,
   VideoPageMusic,
   VideoPageTheWhale,
+  VideoPageHope,
 } from './pages';
 import { Routes as RouterRoutes, Route } from 'react-router-dom';
 import { FullPageLayout, MainLayout } from './layouts';
@@ -40,6 +41,7 @@ const Routes = () => {
           <Route path="commercial" element={<VideoPageCommercial />} />
           <Route path="music" element={<VideoPageMusic />} />
           <Route path="the-whale" element={<VideoPageTheWhale />} />
+          <Route path="hope" element={<VideoPageHope />} />
         </Route>
         <Route path="inside-out" element={<InsideOutPage />} />
       </Route>

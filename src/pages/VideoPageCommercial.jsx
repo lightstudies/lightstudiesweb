@@ -28,7 +28,7 @@ const VideoPageCommercial = () => {
     </ModalItem>,
   ];
   return (
-    <div>
+    <div className="pt-4">
       <ResponsiveGrid elementArray={gridItems} />
     </div>
   );

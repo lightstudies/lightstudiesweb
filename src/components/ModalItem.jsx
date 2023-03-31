@@ -56,7 +56,7 @@ const ModalItem = ({ title, img, invertTitle, children }) => {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full transform overflow-hidden bg-black text-left align-middle shadow-xl transition-all">
-                  <Dialog.Title className="p-3 sm:p-5 md:p-10 text-lg sm:text-2xl md:text-4xl lg:text-6xl text-white">{title}</Dialog.Title>
+                  {/* <Dialog.Title className="p-3 sm:p-5 md:p-10 text-lg sm:text-2xl md:text-4xl lg:text-6xl text-white">{title}</Dialog.Title> */}
                   <button className="group absolute top-0 right-0 hover:bg-white " onClick={closeModal}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
