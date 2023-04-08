@@ -1,5 +1,6 @@
 {
   "name": "lightstudiesweb",
+  "homepage": "https://www.light-studies.com/",
   "version": "0.2.0",
   "private": true,
   "type": "module",
