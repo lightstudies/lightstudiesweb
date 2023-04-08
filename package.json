@@ -1,11 +1,9 @@
 {
   "name": "lightstudiesweb",
-  "homepage": "light-studies.com",
   "version": "0.2.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "predeploy": "yarn run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
     "dev-host": "vite --host",
