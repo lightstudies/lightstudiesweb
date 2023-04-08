@@ -10,7 +10,7 @@ function App() {
   window.prodibiAsync.push({ type: 'settings', settings: { account: PRODIBI_ACCOUNT } });
   
   return (
-    <BrowserRouter basename="/lightstudiesweb/">
+    <BrowserRouter basename="/">
       <Routes />
     </BrowserRouter>
   );
