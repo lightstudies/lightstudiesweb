@@ -6,16 +6,7 @@ const HomePage = () => {
   return (
     <div>
       <div className="mb-[2px]">
-        <ResponsivePlayer
-          customControls
-          url="https://player.vimeo.com/video/330532405"
-          config={{
-            vimeo: {
-              playerOptions: { keyboard: false },
-            },
-          }}
-          parentClassName="pt2x1"
-        />
+        <ResponsivePlayer controls url="https://youtu.be/TpyjJ-HZAf8" parentClassName="pt16x9" />
       </div>
       <div>
         <p className="py-6 text-center [font-size:4cqw] xl:[font-size:3.4rem]">
