@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <div>
       <div className="mb-[2px]">
-        <ResponsivePlayer controls url="https://youtu.be/TpyjJ-HZAf8" parentClassName="pt16x9" />
+        <ResponsivePlayer controls url="https://www.youtube.com/watch?v=afpu5nrEUss" parentClassName="pt16x9" />
       </div>
       <div>
         <p className="py-6 text-center [font-size:4cqw] xl:[font-size:3.4rem]">
