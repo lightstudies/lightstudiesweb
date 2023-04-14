@@ -26,11 +26,11 @@ const VideoPageFiction = () => {
     <ModalItem key="fHeQ2oTIahc" title="Samson: Trailer" img={Samson}>
       <ResponsivePlayer url="https://www.youtube.com/watch?v=fHeQ2oTIahc" parentClassName="pt2-35x1" playing controls />
     </ModalItem>,
-    <ModalItem key="86793409" title="Rescued: Trailer" img={rescued} invertTitle>
-      <ResponsivePlayer url="https://player.vimeo.com/video/86793409" parentClassName="pt16x9" playing controls />
-    </ModalItem>,
-    <ModalItem key="211737522" title="Handel" img={handel}>
+    <ModalItem key="211737522" title="Rescued: Trailer" img={rescued} invertTitle>
       <ResponsivePlayer url="https://player.vimeo.com/video/211737522" parentClassName="pt16x9" playing controls />
+    </ModalItem>,
+    <ModalItem key="191875160" title="Handel" img={handel}>
+      <ResponsivePlayer url="https://player.vimeo.com/video/191875160" parentClassName="pt16x9" playing controls />
     </ModalItem>,
     // <ModalItem key="505309645" title="The Unforgiving" img={Unforgiving}>
     //   <ResponsivePlayer
@@ -43,8 +43,8 @@ const VideoPageFiction = () => {
     // <ModalItem key="481471861" title="Missing Peace: Trailer" img={MissingPeace}>
     //   <ResponsivePlayer url="https://player.vimeo.com/video/481471861" parentClassName="pt16x9" playing controls />
     // </ModalItem>,
-    <ModalItem key="302688922" title="Here I am" img={HereIam}>
-      <ResponsivePlayer url="https://player.vimeo.com/video/302688922" parentClassName="pt2-35x1" playing controls />
+    <ModalItem key="86793409" title="Here I am" img={HereIam}>
+      <ResponsivePlayer url="https://player.vimeo.com/video/86793409" parentClassName="pt2-35x1" playing controls />
     </ModalItem>,
   ];
   return (
