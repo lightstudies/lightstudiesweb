@@ -24,7 +24,7 @@ const ResponsivePlayer = ({
     volume: volume,
     muted: muted,
     controls: controls,
-    controlsVisible: false,
+    controlsVisible: true,
   });
 
   const handlePlayAndPause = () => {
@@ -49,7 +49,7 @@ const ResponsivePlayer = ({
   const handleMouseLeave = () => {
     // setIsHovering(false);
     // Hide controls when mouse leaves
-    setPlayerState({ ...playerState, longFade: false, controlsVisible: false });
+    setPlayerState({ ...playerState, longFade: false, controlsVisible: !playerState.playing });
   };
 
   const handleMute = () => {

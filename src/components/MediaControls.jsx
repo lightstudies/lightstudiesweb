@@ -14,18 +14,28 @@ const MediaControls = ({ playerState, handleFullScreenMode, handleMute, handlePl
           {playerState.playing ? (
             <button
               onClick={handlePlayAndPause}
-              className="focus:shadow-outline absolute top-3/4 left-1/2 z-20 mr-2 inline-flex h-40 w-40 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white p-1 text-xl text-white transition-colors duration-150 hover:border-transparent hover:bg-white hover:text-black md:text-3xl"
+              className="focus:shadow-outline absolute top-3/4 left-1/2 z-20 mr-2 inline-flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white p-1 text-xl text-white transition-colors duration-150 hover:border-transparent hover:bg-white hover:text-black md:h-40 md:w-40 md:text-3xl"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-20 w-20">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="h-10 w-10 md:h-20 md:w-20"
+              >
                 <path d="M15 6.75a.75.75 0 00-.75.75V18a.75.75 0 00.75.75h.75a.75.75 0 00.75-.75V7.5a.75.75 0 00-.75-.75H15zM20.25 6.75a.75.75 0 00-.75.75V18c0 .414.336.75.75.75H21a.75.75 0 00.75-.75V7.5a.75.75 0 00-.75-.75h-.75zM5.055 7.06C3.805 6.347 2.25 7.25 2.25 8.69v8.122c0 1.44 1.555 2.343 2.805 1.628l7.108-4.061c1.26-.72 1.26-2.536 0-3.256L5.055 7.061z" />
               </svg>
             </button>
           ) : (
             <button
               onClick={handlePlayAndPause}
-              className="focus:shadow-outline absolute top-3/4 left-1/2 z-20 mr-2 inline-flex h-40 w-40 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white p-1 text-xl text-white transition-colors duration-150 hover:border-transparent hover:bg-white hover:text-black md:text-3xl"
+              className="focus:shadow-outline absolute top-3/4 left-1/2 z-20 mr-2 inline-flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white p-1 text-xl text-white transition-colors duration-150 hover:border-transparent hover:bg-white hover:text-black md:h-40 md:w-40 md:text-3xl"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-20 w-20">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="h-10 w-10 md:h-20 md:w-20"
+              >
                 <path
                   fillRule="evenodd"
                   d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
