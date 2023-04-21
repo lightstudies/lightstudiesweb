@@ -12,7 +12,7 @@ const ProdibiImageEmbed = ({ id, account, title, height, width, className }) => 
     heightMode: '90vh',
   };
 
-  return <canvas className={className} data-prodibi={JSON.stringify(prodibiData)}></canvas>;
+  return <div className={className} data-prodibi={JSON.stringify(prodibiData)}></div>;
 };
 
 ProdibiImageEmbed.propTypes = {

@@ -13,6 +13,7 @@ const ResponsivePlayer = ({
   muted = false,
   controls = true,
   customControls,
+  light = false,
 }) => {
   const playerDivRef = useRef(null);
   const playerRef = useRef(null);
@@ -36,7 +37,7 @@ const ResponsivePlayer = ({
   };
 
   // const handleMouseMove = () => {
-    
+
   // };
 
   const handleMouseEnter = () => {
@@ -79,6 +80,7 @@ const ResponsivePlayer = ({
         url={url}
         config={config}
         controls={customControls ? false : playerState.controls}
+        light={light}
       />
       {customControls && (
         <MediaControls
@@ -101,6 +103,7 @@ ResponsivePlayer.propTypes = {
   muted: PropTypes.bool,
   controls: PropTypes.bool,
   customControls: PropTypes.bool,
+  light: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
 };
 
 export default ResponsivePlayer;
