@@ -28,7 +28,7 @@ const ModalItem = ({ title, img, invertTitle, children }) => {
           </div>
         </button>
       </div> */}
-      <ImageTile title={title} img={img} onClick={handleClick} invert={invertTitle}/>
+      <ImageTile title={title} img={img} onClick={handleClick} invert={invertTitle} />
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-40" onClose={closeModal}>
@@ -45,7 +45,7 @@ const ModalItem = ({ title, img, invertTitle, children }) => {
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center py-5 px-8 text-center">
+            <div className="flex min-h-fit items-center justify-center py-5 px-8 text-center">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -55,20 +55,22 @@ const ModalItem = ({ title, img, invertTitle, children }) => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full transform overflow-hidden bg-black text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="m-0 w-full transform overflow-hidden text-left align-middle shadow-xl transition-all 2xl:mx-40">
                   {/* <Dialog.Title className="p-3 sm:p-5 md:p-10 text-lg sm:text-2xl md:text-4xl lg:text-6xl text-white">{title}</Dialog.Title> */}
-                  <button className="group absolute top-0 right-0 hover:bg-white " onClick={closeModal}>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="white"
-                      className="h-6 w-6 md:h-12 md:w-12 hover:stroke-black"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
+                  <Dialog.Overlay className="h-6 w-6 md:h-12 md:w-12">
+                    <button className="group bg-black hover:bg-white" onClick={closeModal}>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="white"
+                        className="h-6 w-6 hover:stroke-black md:h-12 md:w-12"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </Dialog.Overlay>
                   {children}
                 </Dialog.Panel>
               </Transition.Child>

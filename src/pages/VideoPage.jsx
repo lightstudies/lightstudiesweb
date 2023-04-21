@@ -20,6 +20,8 @@ const VideoPage = () => {
   const gridItems = [
     <ModalItem key="330532405" title="Old Demo Reels" img={oldReel}>
       <ResponsivePlayer url="https://player.vimeo.com/video/330532405" parentClassName="pt2x1" playing controls />
+      <ResponsivePlayer url="https://vimeo.com/96471326" parentClassName="pt16x9" controls />
+      <ResponsivePlayer url="https://vimeo.com/35365673" parentClassName="pt16x9" controls />
     </ModalItem>,
     <ModalItem key="230680349" title="Solar Eclipse" img={eclipse}>
       <ResponsivePlayer url="https://player.vimeo.com/video/230680349" parentClassName="pt16x9" playing controls />

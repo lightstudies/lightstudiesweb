@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { ProdibiImageEmbed } from '../components';
-import { PRODIBI_ACCOUNT } from '../constants';
+import { ProdibiGridEmbed } from '../components';
+// import { PRODIBI_ACCOUNT } from '../constants';
 import { useScript } from '../hooks';
 
 const InsideOutPage = () => {
@@ -12,48 +12,38 @@ const InsideOutPage = () => {
           BUY PRINTS
         </Link>
       </div>
-      <div className="flex">
-        <div className="flex-1">
-          <ProdibiImageEmbed
-            className="flex-auto"
-            id="1zq70jdql4y9y62"
-            account={PRODIBI_ACCOUNT}
-            height={15050}
-            width={15050}
-          />
+      <div className="flex justify-center">
+        <div className="w-5/6">
+          <ProdibiGridEmbed container="xdr5je174zrd59e" />
+          <div className="px-2 py-4 font-default-sans text-lg sm:text-2xl xl:px-0">
+            <p>
+              INSIDEOUT is a panoramic photography project developed over many years around the globe; an attempt to
+              re-imagine a familiar space as a dream space. A visualization of the possibilities an Einstein-Rosen
+              Bridge (wormhole) could afford if occasioned in a mental/physical space familiar to us.
+            </p>
+            <br />
+            <p>
+              These are physical pieces intended for ultra large format. Currently available for purchase, the preferred
+              format is acrylic; other print options are available at my{' '}
+              <Link className="font-bold hover:bg-neutral-700 hover:text-white" to="/inside-out/buy">
+                PICTOREM store.
+              </Link>
+            </p>
+            <br />
+            <p>
+              Commissions for this project are OPEN. I can execute a piece for the outdoor space of one’s choosing
+              (landscape, urban, architecture, etc). Please{' '}
+              <Link
+                to="mailto:light.studies@gmail.com"
+                target="_blank"
+                className="font-bold hover:bg-neutral-700 hover:text-white"
+              >
+                contact me
+              </Link>{' '}
+              if you would like to discuss an INSIDEOUT commission. Thank you!
+            </p>
+          </div>
         </div>
-
-        <div className="flex-1">
-          <ProdibiImageEmbed
-            className="flex-auto"
-            id="9zdr9jxr0g2718v"
-            account={PRODIBI_ACCOUNT}
-            height={13866}
-            width={13866}
-          />
-        </div>
-      </div>
-      <div className="px-2 font-default-sans text-lg sm:text-2xl xl:px-0">
-        <p>
-          INSIDEOUT is a panoramic photography project I’ve developed for many years around the globe. It’s an attempt
-          to re-imagine a familiar space as something dreamed/imagined. The visual result stems from my pursuit of the
-          possibilities an Einstein-Rosen Bridge (wormhole) could afford if occasioned in a mental/physical space
-          familiar to us.
-        </p>
-        <br />
-        <p>
-          These are physical pieces intended for close viewing in ultra large format. Currently available for purchase,
-          the preferred format is acrylic; other print options are available.
-        </p>
-        <br />
-        <p>
-          Commissions for this project are OPEN. I can execute a piece for the outdoor space of one’s choosing
-          (landscape, urban, architecture, etc). Please {' '}
-          <Link to="mailto:light.studies@gmail.com" target="_blank" className="hover:bg-neutral-700 hover:text-white font-bold">
-            contact me
-          </Link>{' '}
-          if you would like to discuss an INSIDEOUT commission. Thank you!
-        </p>
       </div>
     </div>
   );
