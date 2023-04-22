@@ -1,20 +1,21 @@
 import { Link } from 'react-router-dom';
 import { ProdibiGridEmbed } from '../components';
-// import { PRODIBI_ACCOUNT } from '../constants';
 import { useScript } from '../hooks';
 
 const InsideOutPage = () => {
   useScript('./prodibi.embed.2.0.min.js');
   return (
-    <div className="flex h-auto flex-col gap-5 pt-5">
-      <div className="flex justify-center">
-        <Link className="text-6xl hover:bg-neutral-700 hover:text-white" to="/inside-out/buy">
-          BUY PRINTS
-        </Link>
-      </div>
-      <div className="flex justify-center">
-        <div className="w-5/6">
+    <>
+      <div className="flex h-auto flex-col gap-5 pt-5">
+        <div className="flex justify-center">
+          <Link className="text-6xl hover:bg-neutral-700 hover:text-white" to="/inside-out/buy">
+            BUY PRINTS
+          </Link>
+        </div>
+        <div>
           <ProdibiGridEmbed container="xdr5je174zrd59e" />
+        </div>
+        <div className="flex flex-col">
           <div className="px-2 py-4 font-default-sans text-lg sm:text-2xl xl:px-0">
             <p>
               INSIDEOUT is a panoramic photography project developed over many years around the globe; an attempt to
@@ -45,7 +46,7 @@ const InsideOutPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
