@@ -24,7 +24,7 @@ const AboutPage = () => {
             </svg>
           </Link>
 
-          <Link to="https://www.instagram.com/flip_in_the_water/" target="_blank">
+          <Link to="https://www.instagram.com/light_from_before/" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
