@@ -28,7 +28,7 @@ export const MainLayout = () => {
         </Link>
         <div>© Copyright 2023 Joshua Spires</div>
 
-        <Link to="https://www.instagram.com/flip_in_the_water/" target="_blank" className="pl-2">
+        <Link to="https://www.instagram.com/light_from_before/" target="_blank" className="pl-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
