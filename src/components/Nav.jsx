@@ -80,7 +80,15 @@ function Nav() {
                 >
                   about
                 </NavLink>
-                <DropdownLink topLink={{ text: 'photo', path: '/photo' }} links={photoLinks} />
+
+                <Link
+                  to="https://spires.pic-time.com/-prints3168/gallery"
+                  target="_blank"
+                  className="whitespace-nowrap px-5 py-4 dark:hover:bg-neutral-700 dark:hover:text-white"
+                >
+                  photo
+                </Link>
+                {/* <DropdownLink topLink={{ text: 'photo', path: '/photo' }} links={photoLinks} /> */}
                 <DropdownLink topLink={{ text: 'video', path: '/video' }} links={videoLinks} />
 
                 <NavLink
@@ -93,14 +101,6 @@ function Nav() {
                 >
                   INSIDEOUT
                 </NavLink>
-
-                <Link
-                  to="https://spires.pic-time.com/-prints3168/gallery"
-                  target="_blank"
-                  className="whitespace-nowrap px-5 py-4 dark:hover:bg-neutral-700 dark:hover:text-white"
-                >
-                  buy prints
-                </Link>
               </div>
             </div>
           </div>
